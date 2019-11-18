@@ -1,0 +1,1844 @@
+From 3a1f3924f14a3116a2e77efaf824389ef8a0bf47 Mon Sep 17 00:00:00 2001
+From: "nemcov_a@mail.ru" <n171917n>
+Date: Mon, 18 Nov 2019 22:44:59 +0500
+Subject: [PATCH] =?UTF-8?q?--=20=D0=A1=D0=BE=D0=B7=D0=B4=D0=B0=D0=BB=20?=
+ =?UTF-8?q?=D0=B3=D0=BB=D0=B0=D0=B2=D0=BD=D1=83=D1=8E=20=D1=84=D0=BE=D1=80?=
+ =?UTF-8?q?=D0=BC=D1=83=20--=D0=94=D0=BE=D0=B1=D0=B0=D0=B2=D0=B8=D0=BB=20?=
+ =?UTF-8?q?=D0=BE=D1=81=D0=BD=D0=BE=D0=B2=D0=BD=D1=8B=D0=B5=20=D0=BA=D0=BD?=
+ =?UTF-8?q?=D0=BE=D0=BF=D0=BA=D0=B8=20=D0=BC=D0=B5=D0=BD=D1=8E=20--=D0=9F?=
+ =?UTF-8?q?=D1=80=D0=B8=20=D0=BD=D0=B0=D0=B6=D0=B0=D1=82=D0=B8=D0=B8=20?=
+ =?UTF-8?q?=D0=BD=D0=B0=20=D0=BA=D0=BD=D0=BE=D0=BF=D0=BA=D1=83=20"=D0=91?=
+ =?UTF-8?q?=D1=80=D0=BE=D0=BD=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8?=
+ =?UTF-8?q?=D0=B5",=20=D0=BE=D1=82=D0=BA=D1=80=D1=8B=D0=B2=D0=B0=D0=B5?=
+ =?UTF-8?q?=D1=82=D1=81=D1=8F=20=D0=BE=D0=BA=D0=BD=D0=BE?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ DXApplication1/CollegeCoursework.sln          |  25 +
+ .../DXApplication1/FHostel.Designer.cs        | 405 +++++++++++
+ DXApplication1/DXApplication1/FHostel.cs      |  31 +
+ DXApplication1/DXApplication1/FHostel.resx    | 653 ++++++++++++++++++
+ DXApplication1/DXApplication1/Hostel.csproj   | 103 +++
+ DXApplication1/DXApplication1/Program.cs      |  28 +
+ .../DXApplication1/Properties/AssemblyInfo.cs |  36 +
+ .../Properties/Resources.Designer.cs          |  71 ++
+ .../DXApplication1/Properties/Resources.resx  | 117 ++++
+ .../Properties/Settings.Designer.cs           |  30 +
+ .../Properties/Settings.settings              |   7 +
+ .../DXApplication1/Properties/licenses.licx   |   2 +
+ .../DXApplication1/Reservation.Designer.cs    |  46 ++
+ DXApplication1/DXApplication1/Reservation.cs  |  21 +
+ .../DXApplication1/Reservation.resx           | 120 ++++
+ 15 files changed, 1695 insertions(+)
+ create mode 100644 DXApplication1/CollegeCoursework.sln
+ create mode 100644 DXApplication1/DXApplication1/FHostel.Designer.cs
+ create mode 100644 DXApplication1/DXApplication1/FHostel.cs
+ create mode 100644 DXApplication1/DXApplication1/FHostel.resx
+ create mode 100644 DXApplication1/DXApplication1/Hostel.csproj
+ create mode 100644 DXApplication1/DXApplication1/Program.cs
+ create mode 100644 DXApplication1/DXApplication1/Properties/AssemblyInfo.cs
+ create mode 100644 DXApplication1/DXApplication1/Properties/Resources.Designer.cs
+ create mode 100644 DXApplication1/DXApplication1/Properties/Resources.resx
+ create mode 100644 DXApplication1/DXApplication1/Properties/Settings.Designer.cs
+ create mode 100644 DXApplication1/DXApplication1/Properties/Settings.settings
+ create mode 100644 DXApplication1/DXApplication1/Properties/licenses.licx
+ create mode 100644 DXApplication1/DXApplication1/Reservation.Designer.cs
+ create mode 100644 DXApplication1/DXApplication1/Reservation.cs
+ create mode 100644 DXApplication1/DXApplication1/Reservation.resx
+
+diff --git a/DXApplication1/CollegeCoursework.sln b/DXApplication1/CollegeCoursework.sln
+new file mode 100644
+index 0000000..a2a9cc3
+--- /dev/null
++++ b/DXApplication1/CollegeCoursework.sln
+@@ -0,0 +1,25 @@
++﻿
++Microsoft Visual Studio Solution File, Format Version 12.00
++# Visual Studio 15
++VisualStudioVersion = 15.0.28307.902
++MinimumVisualStudioVersion = 10.0.40219.1
++Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hostel", "DXApplication1\Hostel.csproj", "{CA7D97F6-8BED-40AD-8A36-9F415414D4F6}"
++EndProject
++Global
++	GlobalSection(SolutionConfigurationPlatforms) = preSolution
++		Debug|Any CPU = Debug|Any CPU
++		Release|Any CPU = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(ProjectConfigurationPlatforms) = postSolution
++		{CA7D97F6-8BED-40AD-8A36-9F415414D4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
++		{CA7D97F6-8BED-40AD-8A36-9F415414D4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
++		{CA7D97F6-8BED-40AD-8A36-9F415414D4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
++		{CA7D97F6-8BED-40AD-8A36-9F415414D4F6}.Release|Any CPU.Build.0 = Release|Any CPU
++	EndGlobalSection
++	GlobalSection(SolutionProperties) = preSolution
++		HideSolutionNode = FALSE
++	EndGlobalSection
++	GlobalSection(ExtensibilityGlobals) = postSolution
++		SolutionGuid = {89DF5B08-3947-42CE-9D0D-09F5023F0C50}
++	EndGlobalSection
++EndGlobal
+diff --git a/DXApplication1/DXApplication1/FHostel.Designer.cs b/DXApplication1/DXApplication1/FHostel.Designer.cs
+new file mode 100644
+index 0000000..5fcbe29
+--- /dev/null
++++ b/DXApplication1/DXApplication1/FHostel.Designer.cs
+@@ -0,0 +1,405 @@
++﻿namespace DXApplication1
++{
++    partial class fHostel
++    {
++        /// <summary>
++        /// Required designer variable.
++        /// </summary>
++        private System.ComponentModel.IContainer components = null;
++
++        /// <summary>
++        /// Clean up any resources being used.
++        /// </summary>
++        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
++        protected override void Dispose(bool disposing)
++        {
++            if (disposing && (components != null))
++            {
++                components.Dispose();
++            }
++            base.Dispose(disposing);
++        }
++
++        #region Windows Form Designer generated code
++
++        /// <summary>
++        /// Required method for Designer support - do not modify
++        /// the contents of this method with the code editor.
++        /// </summary>
++        private void InitializeComponent()
++        {
++            this.components = new System.ComponentModel.Container();
++            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fHostel));
++            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
++            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
++            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
++            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
++            this.btnReservation = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
++            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
++            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
++            this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
++            this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
++            this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
++            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
++            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
++            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
++            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
++            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
++            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
++            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
++            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
++            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
++            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
++            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
++            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
++            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
++            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
++            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
++            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
++            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
++            this.SuspendLayout();
++            // 
++            // ribbonControl1
++            // 
++            this.ribbonControl1.ExpandCollapseItem.Id = 0;
++            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
++            this.ribbonControl1.ExpandCollapseItem,
++            this.barButtonItem1,
++            this.barButtonItem2,
++            this.barSubItem1,
++            this.barButtonItem3,
++            this.barButtonItem4,
++            this.barButtonItem5,
++            this.barButtonItem6,
++            this.barButtonItem7,
++            this.btnReservation,
++            this.barButtonItem9,
++            this.barSubItem2,
++            this.barButtonItem10,
++            this.barButtonItem11,
++            this.barButtonItem12,
++            this.barButtonItem13,
++            this.barSubItem3,
++            this.barButtonItem14,
++            this.barButtonItem15,
++            this.barButtonItem16,
++            this.skinRibbonGalleryBarItem1,
++            this.barButtonItem17});
++            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
++            this.ribbonControl1.MaxItemId = 25;
++            this.ribbonControl1.Name = "ribbonControl1";
++            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
++            this.ribbonPage2,
++            this.ribbonPage3,
++            this.ribbonPage4});
++            this.ribbonControl1.Size = new System.Drawing.Size(716, 141);
++            // 
++            // barButtonItem1
++            // 
++            this.barButtonItem1.Caption = "Бронирование";
++            this.barButtonItem1.Id = 2;
++            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
++            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
++            this.barButtonItem1.Name = "barButtonItem1";
++            // 
++            // barButtonItem2
++            // 
++            this.barButtonItem2.Caption = "Редактирование";
++            this.barButtonItem2.Id = 3;
++            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
++            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
++            this.barButtonItem2.Name = "barButtonItem2";
++            // 
++            // barSubItem1
++            // 
++            this.barSubItem1.Caption = "Комнаты";
++            this.barSubItem1.Id = 5;
++            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
++            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
++            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5),
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6)});
++            this.barSubItem1.Name = "barSubItem1";
++            // 
++            // barButtonItem3
++            // 
++            this.barButtonItem3.Caption = "1 Комната";
++            this.barButtonItem3.Id = 6;
++            this.barButtonItem3.Name = "barButtonItem3";
++            // 
++            // barButtonItem4
++            // 
++            this.barButtonItem4.Caption = "2 Комната";
++            this.barButtonItem4.Id = 7;
++            this.barButtonItem4.Name = "barButtonItem4";
++            // 
++            // barButtonItem5
++            // 
++            this.barButtonItem5.Caption = "3 Комната";
++            this.barButtonItem5.Id = 8;
++            this.barButtonItem5.Name = "barButtonItem5";
++            // 
++            // barButtonItem6
++            // 
++            this.barButtonItem6.Caption = "4 Комната";
++            this.barButtonItem6.Id = 9;
++            this.barButtonItem6.Name = "barButtonItem6";
++            // 
++            // barButtonItem7
++            // 
++            this.barButtonItem7.Caption = "barButtonItem7";
++            this.barButtonItem7.Id = 10;
++            this.barButtonItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
++            this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
++            this.barButtonItem7.Name = "barButtonItem7";
++            // 
++            // btnReservation
++            // 
++            this.btnReservation.Caption = "Бронирование";
++            this.btnReservation.Id = 11;
++            this.btnReservation.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBronirovanie.ImageOptions.Image")));
++            this.btnReservation.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBronirovanie.ImageOptions.LargeImage")));
++            this.btnReservation.Name = "btnReservation";
++            this.btnReservation.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBronirovanie_ItemClick);
++            // 
++            // barButtonItem9
++            // 
++            this.barButtonItem9.Caption = "Редактирование";
++            this.barButtonItem9.Id = 12;
++            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
++            this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
++            this.barButtonItem9.Name = "barButtonItem9";
++            // 
++            // barSubItem2
++            // 
++            this.barSubItem2.Caption = "Комнаты";
++            this.barSubItem2.Id = 13;
++            this.barSubItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem2.ImageOptions.Image")));
++            this.barSubItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem2.ImageOptions.LargeImage")));
++            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem10),
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem11),
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem12),
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem13)});
++            this.barSubItem2.Name = "barSubItem2";
++            // 
++            // barButtonItem10
++            // 
++            this.barButtonItem10.Caption = "1 Комната";
++            this.barButtonItem10.Id = 14;
++            this.barButtonItem10.Name = "barButtonItem10";
++            // 
++            // barButtonItem11
++            // 
++            this.barButtonItem11.Caption = "2 Комната";
++            this.barButtonItem11.Id = 15;
++            this.barButtonItem11.Name = "barButtonItem11";
++            // 
++            // barButtonItem12
++            // 
++            this.barButtonItem12.Caption = "3 Комната";
++            this.barButtonItem12.Id = 16;
++            this.barButtonItem12.Name = "barButtonItem12";
++            // 
++            // barButtonItem13
++            // 
++            this.barButtonItem13.Caption = "4 Комната";
++            this.barButtonItem13.Id = 17;
++            this.barButtonItem13.Name = "barButtonItem13";
++            // 
++            // barSubItem3
++            // 
++            this.barSubItem3.Caption = "Выручка";
++            this.barSubItem3.Id = 19;
++            this.barSubItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem3.ImageOptions.Image")));
++            this.barSubItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem3.ImageOptions.LargeImage")));
++            this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem16),
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem14),
++            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem15)});
++            this.barSubItem3.Name = "barSubItem3";
++            // 
++            // barButtonItem16
++            // 
++            this.barButtonItem16.Caption = "За сегодня";
++            this.barButtonItem16.Id = 22;
++            this.barButtonItem16.Name = "barButtonItem16";
++            // 
++            // barButtonItem14
++            // 
++            this.barButtonItem14.Caption = "За неделю";
++            this.barButtonItem14.Id = 20;
++            this.barButtonItem14.Name = "barButtonItem14";
++            // 
++            // barButtonItem15
++            // 
++            this.barButtonItem15.Caption = "За месяц";
++            this.barButtonItem15.Id = 21;
++            this.barButtonItem15.Name = "barButtonItem15";
++            // 
++            // skinRibbonGalleryBarItem1
++            // 
++            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
++            // 
++            // 
++            // 
++            this.skinRibbonGalleryBarItem1.Gallery.ImageSize = new System.Drawing.Size(50, 0);
++            this.skinRibbonGalleryBarItem1.Id = 23;
++            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
++            // 
++            // barButtonItem17
++            // 
++            this.barButtonItem17.Caption = "Клиенты";
++            this.barButtonItem17.Id = 24;
++            this.barButtonItem17.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.Image")));
++            this.barButtonItem17.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.LargeImage")));
++            this.barButtonItem17.Name = "barButtonItem17";
++            // 
++            // ribbonPage2
++            // 
++            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
++            this.ribbonPageGroup3,
++            this.ribbonPageGroup6});
++            this.ribbonPage2.Name = "ribbonPage2";
++            this.ribbonPage2.Text = "Главная";
++            // 
++            // ribbonPageGroup3
++            // 
++            this.ribbonPageGroup3.ItemLinks.Add(this.btnReservation);
++            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem9);
++            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
++            this.ribbonPageGroup3.Text = "Заказы";
++            // 
++            // ribbonPageGroup6
++            // 
++            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem17);
++            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
++            this.ribbonPageGroup6.Text = "Справочник";
++            // 
++            // ribbonPage3
++            // 
++            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
++            this.ribbonPageGroup4});
++            this.ribbonPage3.Name = "ribbonPage3";
++            this.ribbonPage3.Text = "Информация";
++            // 
++            // ribbonPageGroup4
++            // 
++            this.ribbonPageGroup4.ItemLinks.Add(this.barSubItem2);
++            this.ribbonPageGroup4.ItemLinks.Add(this.barSubItem3);
++            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
++            this.ribbonPageGroup4.Text = "Статистика";
++            // 
++            // ribbonPage4
++            // 
++            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
++            this.ribbonPageGroup5});
++            this.ribbonPage4.Name = "ribbonPage4";
++            this.ribbonPage4.Text = "Настройки";
++            // 
++            // ribbonPageGroup5
++            // 
++            this.ribbonPageGroup5.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
++            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
++            this.ribbonPageGroup5.Text = "Оформление";
++            // 
++            // ribbonPageGroup2
++            // 
++            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
++            this.ribbonPageGroup2.Text = "Статистика";
++            // 
++            // ribbonPageGroup1
++            // 
++            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
++            this.ribbonPageGroup1.Text = "Заказы";
++            // 
++            // ribbonPage1
++            // 
++            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
++            this.ribbonPageGroup1,
++            this.ribbonPageGroup2});
++            this.ribbonPage1.Name = "ribbonPage1";
++            this.ribbonPage1.Text = "Главная";
++            // 
++            // documentManager1
++            // 
++            this.documentManager1.MdiParent = this;
++            this.documentManager1.MenuManager = this.ribbonControl1;
++            this.documentManager1.View = this.tabbedView1;
++            this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
++            this.tabbedView1});
++            // 
++            // tabbedView1
++            // 
++            this.tabbedView1.RootContainer.Element = null;
++            // 
++            // fHostel
++            // 
++            this.AllowMdiBar = true;
++            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
++            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
++            this.ClientSize = new System.Drawing.Size(716, 399);
++            this.Controls.Add(this.ribbonControl1);
++            this.IsMdiContainer = true;
++            this.Name = "fHostel";
++            this.Text = "Хостел";
++            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
++            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
++            ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
++            ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
++            this.ResumeLayout(false);
++            this.PerformLayout();
++
++        }
++
++        #endregion
++
++        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
++        private DevExpress.XtraBars.BarSubItem barSubItem1;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
++        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
++        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
++        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
++        private DevExpress.XtraBars.BarButtonItem btnReservation;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
++        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
++        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
++        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
++        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
++        private DevExpress.XtraBars.BarSubItem barSubItem2;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
++        private DevExpress.XtraBars.BarSubItem barSubItem3;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem16;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem15;
++        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
++        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
++        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
++        private DevExpress.XtraBars.BarButtonItem barButtonItem17;
++        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
++        private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
++        private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
++    }
++}
++
+diff --git a/DXApplication1/DXApplication1/FHostel.cs b/DXApplication1/DXApplication1/FHostel.cs
+new file mode 100644
+index 0000000..0825b80
+--- /dev/null
++++ b/DXApplication1/DXApplication1/FHostel.cs
+@@ -0,0 +1,31 @@
++﻿using System;
++using System.Collections.Generic;
++using System.ComponentModel;
++using System.Data;
++using System.Drawing;
++using System.Linq;
++using System.Text;
++using System.Windows.Forms;
++
++namespace DXApplication1
++{
++    public partial class fHostel : DevExpress.XtraEditors.XtraForm
++    {
++        public fHostel()
++        {
++            InitializeComponent();
++        }
++
++        private void btnBronirovanie_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
++        {
++            // Cоздаем экземпляр класса Reservation.
++            Reservation reservation = new Reservation(); 
++
++            // Задаем мултидокументную систему.
++            reservation.MdiParent = this;
++
++            // Показывает окно.
++            reservation.Show();
++        }
++    }
++}
+diff --git a/DXApplication1/DXApplication1/FHostel.resx b/DXApplication1/DXApplication1/FHostel.resx
+new file mode 100644
+index 0000000..d197c6c
+--- /dev/null
++++ b/DXApplication1/DXApplication1/FHostel.resx
+@@ -0,0 +1,653 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<root>
++  <!-- 
++    Microsoft ResX Schema 
++    
++    Version 2.0
++    
++    The primary goals of this format is to allow a simple XML format 
++    that is mostly human readable. The generation and parsing of the 
++    various data types are done through the TypeConverter classes 
++    associated with the data types.
++    
++    Example:
++    
++    ... ado.net/XML headers & schema ...
++    <resheader name="resmimetype">text/microsoft-resx</resheader>
++    <resheader name="version">2.0</resheader>
++    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
++    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
++    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
++    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
++    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
++        <value>[base64 mime encoded serialized .NET Framework object]</value>
++    </data>
++    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
++        <comment>This is a comment</comment>
++    </data>
++                
++    There are any number of "resheader" rows that contain simple 
++    name/value pairs.
++    
++    Each data row contains a name, and value. The row also contains a 
++    type or mimetype. Type corresponds to a .NET class that support 
++    text/value conversion through the TypeConverter architecture. 
++    Classes that don't support this are serialized and stored with the 
++    mimetype set.
++    
++    The mimetype is used for serialized objects, and tells the 
++    ResXResourceReader how to depersist the object. This is currently not 
++    extensible. For a given mimetype the value must be set accordingly:
++    
++    Note - application/x-microsoft.net.object.binary.base64 is the format 
++    that the ResXResourceWriter will generate, however the reader can 
++    read any of the formats listed below.
++    
++    mimetype: application/x-microsoft.net.object.binary.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
++            : and then encoded with base64 encoding.
++    
++    mimetype: application/x-microsoft.net.object.soap.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
++            : and then encoded with base64 encoding.
++
++    mimetype: application/x-microsoft.net.object.bytearray.base64
++    value   : The object must be serialized into a byte array 
++            : using a System.ComponentModel.TypeConverter
++            : and then encoded with base64 encoding.
++    -->
++  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
++    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
++    <xsd:element name="root" msdata:IsDataSet="true">
++      <xsd:complexType>
++        <xsd:choice maxOccurs="unbounded">
++          <xsd:element name="metadata">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" />
++              </xsd:sequence>
++              <xsd:attribute name="name" use="required" type="xsd:string" />
++              <xsd:attribute name="type" type="xsd:string" />
++              <xsd:attribute name="mimetype" type="xsd:string" />
++              <xsd:attribute ref="xml:space" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="assembly">
++            <xsd:complexType>
++              <xsd:attribute name="alias" type="xsd:string" />
++              <xsd:attribute name="name" type="xsd:string" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="data">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
++              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
++              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
++              <xsd:attribute ref="xml:space" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="resheader">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" />
++            </xsd:complexType>
++          </xsd:element>
++        </xsd:choice>
++      </xsd:complexType>
++    </xsd:element>
++  </xsd:schema>
++  <resheader name="resmimetype">
++    <value>text/microsoft-resx</value>
++  </resheader>
++  <resheader name="version">
++    <value>2.0</value>
++  </resheader>
++  <resheader name="reader">
++    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <resheader name="writer">
++    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
++  <data name="barButtonItem1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
++        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAPdEVYdFRpdGxlAEN1c3RvbWVyO5zd1eIAAAK8SURB
++        VDhPZZJdSFNhHMaPTc+a7dNt7Uv32ebcHJ7NzfkxnWuoLRcG6hAV85OMCtQMQanURgbaTZAVESUGQhfZ
++        hSkSXVjgRdlFBFEXQRcFiQZZ2SzDp3eisM0DPzjP/32e5xze96UAxFFm5FNeLbeqKJ2zkCdj/7SLUz5Y
++        +aw6iqKSEr1R9gxKNVxzuVEY6fCZcLrCguZiPZg0+l8WL3lIz2HxE/1xIoonI/V6vVuDlhIDfFouHBI2
++        WkuytzI5LBjopKuJ/jgRJV/BedRQoEHApsPIuU68mruJZzd7UCDZv6JhUTOJ/jgRxSGlB/MVqVvflz9j
++        c+Ul1t6OY/FeJ3rd0jU1i5pI9MeJKGL2PnU1o/rz69tX/P44hS/Pw3hxuxndDtGaIInKTfTHie0BRYmG
++        al1L7xceY3VpHO+mu/Cwz49GE/c1WVPt8e++HDseioaTCer2CvvUdLgdi5OXMHO5EiOVehRnCJ6QNSuB
++        rdUZ4gt2HrYoTWxzF3oX/WVHcTfci/FWP67VeTDa1QbG4YJao3tD02wv8R4gbN+L3YJkmVxh95UFVnv6
++        BhEevYFIJIJwlgXdBgPW19dRVdOEYFUIaq3uBynxkwwdWyBwOPMn2zu7cGXsFjrO9mN+/inuNzZhLBjE
++        7OwcnIXlsDAemK0M+ALhDMnIYgvS3YUln84PhHGq5yKCtW2ob2jCxIkWXHC5UF0TgpUpht5kh0ptgkAg
++        WiaZzNiCQwVF3o2BoVFUN5yELxBCljUHw3YHziiV0BmM0BoZEjZDptSDxxdskow9rsDlLtro7R9G6ZFa
++        uD0B2N2HwReKweUKoTHYoEg3QSrXQSLTkBn3L8nYYgsk5Ct3cuxOWLMZmMwW6A0msut6KFUZOChTQCyW
++        kl8XgsvjgabpByQjjy2Inr+UED3n3B2cBNcOeTEwBDkhBQD1HxX+3ye8Xt6YAAAAAElFTkSuQmCC
++</value>
++  </data>
++  <data name="barButtonItem1.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        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
++</value>
++  </data>
++  <data name="barButtonItem2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
++        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAANdEVYdFRpdGxlAFJlc3VtZTsw1a9vAAACgklEQVQ4
++        T3WSW08TQRiG+0u88A944YXeiIoKGomSqLHGgIByEAsJoCByCETEAAJCCS2nWjlUUQzRaIRgAUHwgBdo
++        YjQxHggHASktbFv21L5+M0sZbtzk2W92Z99nZmfGBMBk7f+Iu0+mUPfoPWp636HKNYnK7je42TmOcudr
++        lDpGUdQ2jMIWN/JtQ8hrGkRO4wBFYeKC+r4PCIXBCUegDsb/LkvdC1YMQc3Dt9AoPf/rG7pLzSiN24Hn
++        1lwShoVwm5SRXvWU7puCyp4JqHoIblcDrFdiUJO0F2XxO6GTdDuhCGRLudUvBOXOMchqCKOP7ahP3o3R
++        BjOGbHmQFZWLGZoeFpAkoaxPCEo6Rkigc2am3RhsyMTXyZdQNAoTkRqRMczFvUJQYH+FoKJheGwajh43
++        pj7PUx3GyPgnPjOZwrKmc1GE09ddQpBrHYS0oSHNUouo2DxUNI7xmpZVi4Cik9xgQwkZkDT+apcQZNOW
++        rAVVpFruYNeelC2Y0C9rnICsb8FkJ3I6hSCj+hm8fpXjCxisMUi6vokU1PgsI8RlO4WAbYlHUjhev4JV
++        oto1gdtd46igk1hGi1xMp/BG8xDymwbgpe+OWe4JQSJtycq6bCDJJGKoXMRgUh9vq/CsK1j2yYi93CEE
++        5qJe/pKzZpBQ8gDni1w4V9iDswVdOHPtPpao/89qEHMrQRxOaxeCU/ku6tgw8BosEiyw5KNK7QVidiWA
++        mb8SfixKiL7UKgQnaUXnPEHMM2iEBYKNxELsec4TwO/lAH4u+vF9QcKXWR/2J9mF4HiWkxbFgaOZDv5v
++        MRntOJLeTtNsw6HUVkRfbMHBlBYcSLZT0IaoCzbsS2ymKEz/AM6IRwuC4ZWaAAAAAElFTkSuQmCC
++</value>
++  </data>
++  <data name="barButtonItem2.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        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
++        pIlQ0/k9uwAAAABJRU5ErkJggg==
++</value>
++  </data>
++  <data name="barSubItem1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
++        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAVdEVYdFRpdGxlAEdyaWRsaW5lcztHcmlkO0ef3vIA
++        AAIsSURBVDhPjZJbTxNRFEYnGhUvvw8VjQX0QXuhFoqISC9KiFGxUDE+mHjBiokt1VguGg1t8PYg1Z+h
++        gG1hpjPTmU77ufc5M1SMDz6s7jOd8619cvYo6blycTbzHXefMt8E6TmPMmaelDH9mFlH6tE67jz8Krj1
++        4EtJUZT9yuT9z2gDEvrZrXtouwAtQRvJ9AeQ4IAyce+TeGE2HBiNJuFAF7Upqu4+180OLbLEp9ek4Prs
++        RyHgTeFrSwglljCQXESQCCUKCMUKCI6/ht9FM2w4JIilSiw4qPBR+EieXTdtuaaNjKbbUKmquiUxLDhO
++        C2NTRRYcUmKpNXEkzZAhjQTchfGCO3XCrdt1GzYJRm+uSsH4VEkcSaVOnZBNAYKDHNIs1LSGgNd2s4WR
++        G+9Z0KVcuV1E02mLwLmRBZy9nJdEc+gfzqLvUk7QO5QVVFULlu1gePKdFERp0bBbqOxwB+pEG6pqAxWG
++        /vvlsc2Y2CT4nsKJFRYc3iPgYCdsitAW1S2uHK79QzA48Ram5cgOohMH/goRGy6bNUPcVSi+zIIjSiT5
++        RnwDvPlk6LmgJzSPE0EiMI/jgWe0zqCb8WewUTWg0iQCVxdZcFQJx1fE3EUHevknP6smwVXyo8LoNEoL
++        /jFXEIwti2+AR+chRyjhzYLdUcpLPj9akAJf5MVqf/QV+qIv0Uv4hvLwDeZxJrIgOH0xJzgV9siiZyCL
++        7guZIgm6CPqa2NTh2H9CYWXfb/YNAymco5fJAAAAAElFTkSuQmCC
++</value>
++  </data>
++  <data name="barSubItem1.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        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
++</value>
++  </data>
++  <data name="barButtonItem7.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
++        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAKdEVYdFRpdGxlAFBpZTuv1tW2AAADdklEQVQ4Tz2T
++        fUybVRTG7ybDRbO44eI/OqcRzCLg5oZrK5KJw49JzIBATCTowmYyi2vXwloKq9MRhRpbSvmILQiS9Q8D
++        hZWxFlraMjrKKnQUyuiCuBkUCYMyt0QFKvh43pfpTX55cs65z5N739yXBX9tYuOzLYzWJiKmpPblbJVJ
++        0FjeJLyubhGtclpqFDTJa1JyaL6F27f2i5OtzfSw8fpjjI1tmDcXKBKfUpmE3VpLNjyhGkzOduB2xIkb
++        sxaq9dBRX2UUXj4p2b+L278249wI4IpC9YvJ6m/TFtq8SoTnLBj+uR7eaQ36b1bAO6WB/3YdJufaYOst
++        w6jhgzsNHx9+lvMFawoYS9gb94iiQTRu9X+GwIwJ7vA5uMKfwhlWw0HaN3kWDsI9cBb//D6N+QEjvJV5
++        dgrYSmxi4i8PfKRry4PvlgH2UDnsN1SwTxChUtgmiHElnC4l1u9cRzRkxN/TFkw0S9ChePsEBcQwiVbg
++        6vCVoStYQhTDGpRtMHoaFwm7Q4b1+RFEg/VYHavD6mgt5j0GOMqOuPlTSLWCpYsBJSwjRYQYluEitA+L
++        eTp7zmB9zo/VgB7RQDWpDtERHf74wQBn6ZuLFPAoK/rqIIyePDR782G+Vgjz0HFcGCqEvus9dPvI7NcQ
++        VUQlVq6RDp7Hn1fU6JG/FqWAbexERcrdry+9Bb3jCAy97+AbVw5MFKhpPwrrzfvw9n6HlavnsEwfcdmj
++        xLL7DO7b6HpiYYQPyFfsu/K5+TC0tjegs2WQblDekobW0bs8js46rLjl+KuvGCsuOW61HENrwb4B/gqZ
++        x/fIxFUiaC6lQ9NNcEqUNqeiMbAEE9E4sgSbxYDlPilxGi5FOioz409RQCzbFvfw49mnkqbkDUJ80XUI
++        lZ2HeFU2iVDnjxCLD4jA+r0eYUMOGrITPGTeTnDPn23Z//qTr2R9khgRaw/gvOVVIhUlRgF0Q4uo9kVQ
++        PbgA7eAixBdCkJ0sWsp5IW4v+WJac5/j/HxKbPxLO5MyChL6c4uTIK1PgbQ2BZqrC6hw/QZZ+xTereqH
++        SGru3yXKTeb2c77mrGcY6x5T/RcSQ+w4mPm0JP39eF/Gh8/fS1NdRqrCek8oMfuS86uk3Jzg/8iffgwy
++        PiB260Nsd+IOJjq6m/psM8G98ceIncQTD5SruT43/39l7dnO/gWJDiHbKOGa6wAAAABJRU5ErkJggg==
++</value>
++  </data>
++  <data name="barButtonItem7.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        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
++</value>
++  </data>
++  <data name="btnBronirovanie.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
++        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAPdEVYdFRpdGxlAEN1c3RvbWVyO5zd1eIAAAK8SURB
++        VDhPZZJdSFNhHMaPTc+a7dNt7Uv32ebcHJ7NzfkxnWuoLRcG6hAV85OMCtQMQanURgbaTZAVESUGQhfZ
++        hSkSXVjgRdlFBFEXQRcFiQZZ2SzDp3eisM0DPzjP/32e5xze96UAxFFm5FNeLbeqKJ2zkCdj/7SLUz5Y
++        +aw6iqKSEr1R9gxKNVxzuVEY6fCZcLrCguZiPZg0+l8WL3lIz2HxE/1xIoonI/V6vVuDlhIDfFouHBI2
++        WkuytzI5LBjopKuJ/jgRJV/BedRQoEHApsPIuU68mruJZzd7UCDZv6JhUTOJ/jgRxSGlB/MVqVvflz9j
++        c+Ul1t6OY/FeJ3rd0jU1i5pI9MeJKGL2PnU1o/rz69tX/P44hS/Pw3hxuxndDtGaIInKTfTHie0BRYmG
++        al1L7xceY3VpHO+mu/Cwz49GE/c1WVPt8e++HDseioaTCer2CvvUdLgdi5OXMHO5EiOVehRnCJ6QNSuB
++        rdUZ4gt2HrYoTWxzF3oX/WVHcTfci/FWP67VeTDa1QbG4YJao3tD02wv8R4gbN+L3YJkmVxh95UFVnv6
++        BhEevYFIJIJwlgXdBgPW19dRVdOEYFUIaq3uBynxkwwdWyBwOPMn2zu7cGXsFjrO9mN+/inuNzZhLBjE
++        7OwcnIXlsDAemK0M+ALhDMnIYgvS3YUln84PhHGq5yKCtW2ob2jCxIkWXHC5UF0TgpUpht5kh0ptgkAg
++        WiaZzNiCQwVF3o2BoVFUN5yELxBCljUHw3YHziiV0BmM0BoZEjZDptSDxxdskow9rsDlLtro7R9G6ZFa
++        uD0B2N2HwReKweUKoTHYoEg3QSrXQSLTkBn3L8nYYgsk5Ct3cuxOWLMZmMwW6A0msut6KFUZOChTQCyW
++        kl8XgsvjgabpByQjjy2Inr+UED3n3B2cBNcOeTEwBDkhBQD1HxX+3ye8Xt6YAAAAAElFTkSuQmCC
++</value>
++  </data>
++  <data name="btnBronirovanie.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        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
++</value>
++  </data>
++  <data name="barButtonItem9.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
++        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAANdEVYdFRpdGxlAFJlc3VtZTsw1a9vAAACgklEQVQ4
++        T3WSW08TQRiG+0u88A944YXeiIoKGomSqLHGgIByEAsJoCByCETEAAJCCS2nWjlUUQzRaIRgAUHwgBdo
++        YjQxHggHASktbFv21L5+M0sZbtzk2W92Z99nZmfGBMBk7f+Iu0+mUPfoPWp636HKNYnK7je42TmOcudr
++        lDpGUdQ2jMIWN/JtQ8hrGkRO4wBFYeKC+r4PCIXBCUegDsb/LkvdC1YMQc3Dt9AoPf/rG7pLzSiN24Hn
++        1lwShoVwm5SRXvWU7puCyp4JqHoIblcDrFdiUJO0F2XxO6GTdDuhCGRLudUvBOXOMchqCKOP7ahP3o3R
++        BjOGbHmQFZWLGZoeFpAkoaxPCEo6Rkigc2am3RhsyMTXyZdQNAoTkRqRMczFvUJQYH+FoKJheGwajh43
++        pj7PUx3GyPgnPjOZwrKmc1GE09ddQpBrHYS0oSHNUouo2DxUNI7xmpZVi4Cik9xgQwkZkDT+apcQZNOW
++        rAVVpFruYNeelC2Y0C9rnICsb8FkJ3I6hSCj+hm8fpXjCxisMUi6vokU1PgsI8RlO4WAbYlHUjhev4JV
++        oto1gdtd46igk1hGi1xMp/BG8xDymwbgpe+OWe4JQSJtycq6bCDJJGKoXMRgUh9vq/CsK1j2yYi93CEE
++        5qJe/pKzZpBQ8gDni1w4V9iDswVdOHPtPpao/89qEHMrQRxOaxeCU/ku6tgw8BosEiyw5KNK7QVidiWA
++        mb8SfixKiL7UKgQnaUXnPEHMM2iEBYKNxELsec4TwO/lAH4u+vF9QcKXWR/2J9mF4HiWkxbFgaOZDv5v
++        MRntOJLeTtNsw6HUVkRfbMHBlBYcSLZT0IaoCzbsS2ymKEz/AM6IRwuC4ZWaAAAAAElFTkSuQmCC
++</value>
++  </data>
++  <data name="barButtonItem9.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
++        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAANdEVYdFRpdGxlAFJlc3VtZTsw1a9vAAAHDElEQVRY
++        R62WB1BUVxSGbYklmphojGUyMUaT2EsmAYkaUGMU+ygiIE2kKYqIBaSpiNLWYEOwNxARREFiiSiIDdHY
++        FaSJSO+96p9z3r7Fpe1OZnJnPnZ58/Z+/zn37t3XDkAj/9NorwBhNHH+B3nzyTo0o2MrdJKD/+f7hKEw
++        wN5zD7A77D52hsbDJ+QedpyJgyT4LrxO34XnqTtwD7yN7QG34HbyJraeiMWWYzew+WgMXA7HwOlQNBwP
++        XsPG/VGw84/CBr+rWOd7BbZ7L7OEgwidUBSg/a6z8XRJ+Xgvg/405x39kWf1rkss6UwIXaCPtRmgA1ct
++        P2i+NkVMc9m7d1Ia5Fjl8xdLuvD8LKHpWg3A7ekoCY5rVXQl+ABs5o2F1eyRsJg+DOHHd7cQNaeeaXiP
++        FZILLOlKKA/gFXRHEMpXdZnkvus1ER+0HHdOmCLMeyHcLdVhr6uGhEdxTWQy6hreNWLpFcGST3h+FikK
++        0Ik3WfPKVs8fK8hvnzDDOS8tLFUfhLVavyBUYgDJOsMmMoF6KbUiZh7nWdKdUBrg4220u2VioSpi5ayR
++        iPDRgemUIdi8dCpCPY0R7LYETvqq2LZSu1EkTw1TJ8VkWxhLehAKA/D6dHY9HtuihZ5r9GCnNRGFybfw
++        Puk0am+74M0ZC1hMG4GHcbFNZDV1DQLVMmobYOx6liWfEfxVVBigy6YjMS1ayDjoTEZ+Ygxq73mgIsoW
++        KQEGWDVL5YNIlFW1gv7mEJb0JJQG6Op86HqLFjL+m20QHeCNymhHlFwwRbjjFPjYWbaQVdbIqEeFiJ5L
++        MEu+ID5iUVsBeH26Oey/1qKFPPHNS+HwsJiLOwdXInr7DDjPH4XrEWdbyBqprke5yGLH0yzpRXCA9ooC
++        dLej45MnlVUU9zABy9dJMEx1MTRUNeBoOBsOBjOhNmY8Bg6fCSMLF8TefdIoY8qYKqZOYJH9KZZ8SSgN
++        0GPd3ivCh7mClIxcmNt6YaqWE1SmrYS9uS4e01eRsTPXwaiJZhirYYXFxg5ITM0UZKUyKutQIrJgfQBL
++        viI+JtoMwBvk0zV0bhdV1AoT+B8Px++LnDHH2BuzDD3x/ThtvExMExg0eiEmzHHG+JkOGDnBAj6+gY1C
++        prhCRi3mrT3Jkr6E0gA9renczi+rQUFZLVQmG0FthjXU59lj8kInjJlkhh17AokADFU1xk9TbTBigjm+
++        G6ODwcOnCzIOL1AupZCYa3uCJf0J/kFSGOBzKzq3s4qqkFtcjYDQKDi4+mHJMidoaJrix3Hz0H+IJvoP
++        nk5CTaip62GBjg1s7SQ4FhgpyGQUMFREARUzx+Y4SwYQCgPwBunF53ZGfiXeFlYhu6gauSXVyC/ljtSg
++        kCaUr6yJUJQx3EEB+lweMcv6GEu+JpQG6G3mfh6pueVIz6tARoEYhLqRQ0FyS3jSD6ICmlwmksny6B5+
++        5Xs5PDNz1VGWfEPwT3KrAfh3gAP0MXELQ2JmKVJyyilIBdLzPwRx8Psbdr6XsX7PRazZGYnVOyJg5XUe
++        y93DYO4WimWuZ2C86TQMnIOQw6EJDq9pdYQlAwmFAXiH9jVyDcWT18V48bYUSVllSKYgaUKQSlqaKiEI
++        75HsYtonVB13Rl7GZNHS8T0ypq84zJJBBD8TKAzQT98lBPGvCvAwtRBP04upG2VIyi5DSnY51u+myn0i
++        YS2RVm5JlZtR5SZylS9xDITuxpPIpKAclvnD8hBLBhMKA/AGGaDrFIzY5zm4m5iHB8mF0m5klCCRupGU
++        VS4sjdAR2iNvaGl4eTIKRJn4Kr0mhe+ZZnGQJUMI5QG07YNw9VEmbjzLwq2XuYhPysfDtCI8fVPSrPIQ
++        mGzhyoNh6HyKKg8QZG9oqWTwsjFTzQ6w5AeiG7vaCiDsARufi7D2jsQKzwhYbA+H6dZz1I18oRuPXhdR
++        N0qRQPtD1pFkWpqUnAqhK69zK/E6j6H3Inx9yrL9LBlKtBmAh3AS6m/YZ7o16EkNXReGEe2JG8+zcTsh
++        D/eSaG9wN2hvcJCXHIT2yCsOQ0E4TKr47WExv6ZSOA0Tf5YMJ/i5sGUA4R/xiYjoo2Pz53IKUU/XoecQ
++        jCv/vMX1J1m4+YL3Rj7uczfSivGMluW5GCSBgnwII/32cCBG3diPBSMIhQF4CA8lRD9ta4kVh9DecAqR
++        99Jx+UEGoh5n0d7IkXbjFS1LinSTPk2XBpF2pUwahoJIl6kMvxntYwF3oPUlaLwgHU1CLLANwLgF2/Cz
++        lgdUtL0xXncHfl2yExP1d2OS4V6oG/kKFaov9YPGUn96Txj5kZTZh0kG+zCRoPm+JVo/iOQRh/B8SPQm
++        +ATjHcybaBjBlTDcUmakyCiR0SJjxFe+hw8h2UOp4gAM30RwCD6eOQi3jtevOfysrwy+jzvaRA6g3b8K
++        pIlQ0/k9uwAAAABJRU5ErkJggg==
++</value>
++  </data>
++  <data name="barSubItem2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
++        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAVdEVYdFRpdGxlAEdyaWRsaW5lcztHcmlkO0ef3vIA
++        AAIsSURBVDhPjZJbTxNRFEYnGhUvvw8VjQX0QXuhFoqISC9KiFGxUDE+mHjBiokt1VguGg1t8PYg1Z+h
++        gG1hpjPTmU77ufc5M1SMDz6s7jOd8619cvYo6blycTbzHXefMt8E6TmPMmaelDH9mFlH6tE67jz8Krj1
++        4EtJUZT9yuT9z2gDEvrZrXtouwAtQRvJ9AeQ4IAyce+TeGE2HBiNJuFAF7Upqu4+180OLbLEp9ek4Prs
++        RyHgTeFrSwglljCQXESQCCUKCMUKCI6/ht9FM2w4JIilSiw4qPBR+EieXTdtuaaNjKbbUKmquiUxLDhO
++        C2NTRRYcUmKpNXEkzZAhjQTchfGCO3XCrdt1GzYJRm+uSsH4VEkcSaVOnZBNAYKDHNIs1LSGgNd2s4WR
++        G+9Z0KVcuV1E02mLwLmRBZy9nJdEc+gfzqLvUk7QO5QVVFULlu1gePKdFERp0bBbqOxwB+pEG6pqAxWG
++        /vvlsc2Y2CT4nsKJFRYc3iPgYCdsitAW1S2uHK79QzA48Ram5cgOohMH/goRGy6bNUPcVSi+zIIjSiT5
++        RnwDvPlk6LmgJzSPE0EiMI/jgWe0zqCb8WewUTWg0iQCVxdZcFQJx1fE3EUHevknP6smwVXyo8LoNEoL
++        /jFXEIwti2+AR+chRyjhzYLdUcpLPj9akAJf5MVqf/QV+qIv0Uv4hvLwDeZxJrIgOH0xJzgV9siiZyCL
++        7guZIgm6CPqa2NTh2H9CYWXfb/YNAymco5fJAAAAAElFTkSuQmCC
++</value>
++  </data>
++  <data name="barSubItem2.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        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
++</value>
++  </data>
++  <data name="barSubItem3.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
++        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAKdEVYdFRpdGxlAFBpZTuv1tW2AAADdklEQVQ4Tz2T
++        fUybVRTG7ybDRbO44eI/OqcRzCLg5oZrK5KJw49JzIBATCTowmYyi2vXwloKq9MRhRpbSvmILQiS9Q8D
++        hZWxFlraMjrKKnQUyuiCuBkUCYMyt0QFKvh43pfpTX55cs65z5N739yXBX9tYuOzLYzWJiKmpPblbJVJ
++        0FjeJLyubhGtclpqFDTJa1JyaL6F27f2i5OtzfSw8fpjjI1tmDcXKBKfUpmE3VpLNjyhGkzOduB2xIkb
++        sxaq9dBRX2UUXj4p2b+L278249wI4IpC9YvJ6m/TFtq8SoTnLBj+uR7eaQ36b1bAO6WB/3YdJufaYOst
++        w6jhgzsNHx9+lvMFawoYS9gb94iiQTRu9X+GwIwJ7vA5uMKfwhlWw0HaN3kWDsI9cBb//D6N+QEjvJV5
++        dgrYSmxi4i8PfKRry4PvlgH2UDnsN1SwTxChUtgmiHElnC4l1u9cRzRkxN/TFkw0S9ChePsEBcQwiVbg
++        6vCVoStYQhTDGpRtMHoaFwm7Q4b1+RFEg/VYHavD6mgt5j0GOMqOuPlTSLWCpYsBJSwjRYQYluEitA+L
++        eTp7zmB9zo/VgB7RQDWpDtERHf74wQBn6ZuLFPAoK/rqIIyePDR782G+Vgjz0HFcGCqEvus9dPvI7NcQ
++        VUQlVq6RDp7Hn1fU6JG/FqWAbexERcrdry+9Bb3jCAy97+AbVw5MFKhpPwrrzfvw9n6HlavnsEwfcdmj
++        xLL7DO7b6HpiYYQPyFfsu/K5+TC0tjegs2WQblDekobW0bs8js46rLjl+KuvGCsuOW61HENrwb4B/gqZ
++        x/fIxFUiaC6lQ9NNcEqUNqeiMbAEE9E4sgSbxYDlPilxGi5FOioz409RQCzbFvfw49mnkqbkDUJ80XUI
++        lZ2HeFU2iVDnjxCLD4jA+r0eYUMOGrITPGTeTnDPn23Z//qTr2R9khgRaw/gvOVVIhUlRgF0Q4uo9kVQ
++        PbgA7eAixBdCkJ0sWsp5IW4v+WJac5/j/HxKbPxLO5MyChL6c4uTIK1PgbQ2BZqrC6hw/QZZ+xTereqH
++        SGru3yXKTeb2c77mrGcY6x5T/RcSQ+w4mPm0JP39eF/Gh8/fS1NdRqrCek8oMfuS86uk3Jzg/8iffgwy
++        PiB260Nsd+IOJjq6m/psM8G98ceIncQTD5SruT43/39l7dnO/gWJDiHbKOGa6wAAAABJRU5ErkJggg==
++</value>
++  </data>
++  <data name="barSubItem3.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        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
++</value>
++  </data>
++  <data name="barButtonItem17.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABx0RVh0VGl0
++        bGUAVGVhbTtQZW9wbGU7R3JvdXA7VXNlcpN7YEkAAANjSURBVDhPfZJ/TNJpHMe/VPNXiuZWa3a76iyd
++        GVomUVqRpUKCQIHlpmiOnJlopMmgA6KbRiemaYKcR5b2g5bljyXJMjIzbeUy7fdhbXX3z533T22F/bB7
++        3wNtra3NZ3s/fzzv9/u1Z599KAAUj8ejJFwJJRQKaenp6TQ+n08TCAS06Tw2m00FBwdTXgCXy53RKluZ
++        11EU/6SrOH7SVrDimTkrpoyEZ07nfQUI04W+Vinj3WUV57/RxjwMGQQ4JolECX912HSewWD4AhDwBEE1
++        kqiPd22VsB+RwlFXiguVRVN//flq78TERGFPvXrqaZ8NPcY8NBckQMdZ+Emcxpnn/YHWmkSJRKJA067N
++        d545GjDp6sZIqxp9B5PdgwcT3zjL46baFBveD7RWwu26gsHabOj4jJtkJnO+AsRisZ+5NFMx0KjA2wc2
++        tBfFYaxZjv7qbDw8q8T1SjEqOIvxeuQsOpWpUApYJQQQ4AWQixYeHu6zhZMYfWx/qtth1sK8fSm6NEJ0
++        aLbiiGg5LNI4qNk/wm7S4FA+072BzYqJiIjw9XSpkJAQ/7La9TK9NflJ76gBoy/aUV+YhE59Ntx/38U/
++        Qw0wSVkwytNwz3URHbdV2FvFfJpVFl1AukHUz7+xrzfZc+B8VIG24XzY7+txqe8wOnXb8e6lE//eNKIx
++        Jx6Xrlaga1iN369lwOqQoqxuLSSKxf2U8njC57ahEph6tuFoZyqqOzhosatRV87FvTNa9BszcSh3Jc5d
++        1Xk9XUsCyi1MqCwsCOVhn6mcA9ENuZplYzJN7B96U+bb+tP7YDxR+GFfVeJUjXIjDCVrkK9d9am6ec9k
++        3WkFVDWiSXHx0nGObP7DTVnzLN4ZENHJQOZwc35aUVjLsKmszPddI7vRPbYHzYM8mJybsPOXJR95RWEX
++        GBtD19Dp9Lmk4zkBlF6v94qcWcXHGY9P3tiBa+Ny9LjycWo4BY1Da2G6xYJ5gCzQmdVg54a6SNaflUn/
++        0vsG4COrioSll6xq7zoctsfiaF8sjE4GtO2RUJ1fAnnTIjAzgkCygbF8/+8As7aV/qATKBZ0p8nnP0gp
++        mDuetCsU66UhYGUEP1+1NfBRzBZ/R1Sy368k6xeV4vMdgOaBEPkSBRDNJgr6RoFEnnePPyNqswegp/4H
++        6rXSVw04ZQQAAAAASUVORK5CYII=
++</value>
++  </data>
++  <data name="barButtonItem17.ImageOptions.LargeImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++    <value>
++        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
++</value>
++  </data>
++  <metadata name="documentManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
++    <value>17, 17</value>
++  </metadata>
++</root>
+\ No newline at end of file
+diff --git a/DXApplication1/DXApplication1/Hostel.csproj b/DXApplication1/DXApplication1/Hostel.csproj
+new file mode 100644
+index 0000000..ed8a9cd
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Hostel.csproj
+@@ -0,0 +1,103 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <PropertyGroup>
++    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
++    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
++    <ProductVersion>8.0.30703</ProductVersion>
++    <SchemaVersion>2.0</SchemaVersion>
++    <ProjectGuid>{CA7D97F6-8BED-40AD-8A36-9F415414D4F6}</ProjectGuid>
++    <OutputType>WinExe</OutputType>
++    <AppDesignerFolder>Properties</AppDesignerFolder>
++    <RootNamespace>DXApplication1</RootNamespace>
++    <AssemblyName>DXApplication1</AssemblyName>
++    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
++    <FileAlignment>512</FileAlignment>
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
++    <PlatformTarget>AnyCPU</PlatformTarget>
++    <DebugSymbols>true</DebugSymbols>
++    <DebugType>full</DebugType>
++    <Optimize>false</Optimize>
++    <OutputPath>bin\Debug\</OutputPath>
++    <DefineConstants>DEBUG;TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++  </PropertyGroup>
++  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
++    <PlatformTarget>AnyCPU</PlatformTarget>
++    <DebugType>pdbonly</DebugType>
++    <Optimize>true</Optimize>
++    <OutputPath>bin\Release\</OutputPath>
++    <DefineConstants>TRACE</DefineConstants>
++    <ErrorReport>prompt</ErrorReport>
++    <WarningLevel>4</WarningLevel>
++  </PropertyGroup>
++  <ItemGroup>
++    <Reference Include="DevExpress.BonusSkins.v17.1" />
++    <Reference Include="DevExpress.Data.v17.1" />
++    <Reference Include="DevExpress.Utils.v17.1" />
++    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
++    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
++    <Reference Include="DevExpress.XtraEditors.v17.1" />
++    <Reference Include="DevExpress.Printing.v17.1.Core" />
++    <Reference Include="System" />
++    <Reference Include="System.Core" />
++    <Reference Include="System.Xml.Linq" />
++    <Reference Include="System.Data.DataSetExtensions" />
++    <Reference Include="Microsoft.CSharp" />
++    <Reference Include="System.Data" />
++    <Reference Include="System.Deployment" />
++    <Reference Include="System.Drawing" />
++    <Reference Include="System.Windows.Forms" />
++    <Reference Include="System.Xml" />
++  </ItemGroup>
++  <ItemGroup>
++    <Compile Include="fHostel.cs">
++      <SubType>Form</SubType>
++    </Compile>
++    <Compile Include="fHostel.Designer.cs">
++      <DependentUpon>fHostel.cs</DependentUpon>
++    </Compile>
++    <Compile Include="Program.cs" />
++    <Compile Include="Properties\AssemblyInfo.cs" />
++    <Compile Include="Reservation.cs">
++      <SubType>Form</SubType>
++    </Compile>
++    <Compile Include="Reservation.Designer.cs">
++      <DependentUpon>Reservation.cs</DependentUpon>
++    </Compile>
++    <EmbeddedResource Include="fHostel.resx">
++      <DependentUpon>fHostel.cs</DependentUpon>
++    </EmbeddedResource>
++    <EmbeddedResource Include="Properties\licenses.licx" />
++    <EmbeddedResource Include="Properties\Resources.resx">
++      <Generator>ResXFileCodeGenerator</Generator>
++      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
++      <SubType>Designer</SubType>
++    </EmbeddedResource>
++    <Compile Include="Properties\Resources.Designer.cs">
++      <AutoGen>True</AutoGen>
++      <DependentUpon>Resources.resx</DependentUpon>
++    </Compile>
++    <EmbeddedResource Include="Reservation.resx">
++      <DependentUpon>Reservation.cs</DependentUpon>
++    </EmbeddedResource>
++    <None Include="Properties\Settings.settings">
++      <Generator>SettingsSingleFileGenerator</Generator>
++      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
++    </None>
++    <Compile Include="Properties\Settings.Designer.cs">
++      <AutoGen>True</AutoGen>
++      <DependentUpon>Settings.settings</DependentUpon>
++      <DesignTimeSharedInput>True</DesignTimeSharedInput>
++    </Compile>
++  </ItemGroup>
++  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
++  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
++       Other similar extension points exist, see Microsoft.Common.targets.
++  <Target Name="BeforeBuild">
++  </Target>
++  <Target Name="AfterBuild">
++  </Target>
++  -->
++</Project>
+\ No newline at end of file
+diff --git a/DXApplication1/DXApplication1/Program.cs b/DXApplication1/DXApplication1/Program.cs
+new file mode 100644
+index 0000000..368d930
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Program.cs
+@@ -0,0 +1,28 @@
++﻿using System;
++using System.Collections.Generic;
++using System.Linq;
++using System.Windows.Forms;
++using DevExpress.UserSkins;
++using DevExpress.Skins;
++using DevExpress.LookAndFeel;
++
++namespace DXApplication1
++{
++    static class Program
++    {
++        /// <summary>
++        /// The main entry point for the application.
++        /// </summary>
++        [STAThread]
++        static void Main()
++        {
++            Application.EnableVisualStyles();
++            Application.SetCompatibleTextRenderingDefault(false);
++
++            BonusSkins.Register();
++            SkinManager.EnableFormSkins();
++            UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
++            Application.Run(new fHostel());
++        }
++    }
++}
+diff --git a/DXApplication1/DXApplication1/Properties/AssemblyInfo.cs b/DXApplication1/DXApplication1/Properties/AssemblyInfo.cs
+new file mode 100644
+index 0000000..a8763d4
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Properties/AssemblyInfo.cs
+@@ -0,0 +1,36 @@
++﻿using System.Reflection;
++using System.Runtime.CompilerServices;
++using System.Runtime.InteropServices;
++
++// General Information about an assembly is controlled through the following 
++// set of attributes. Change these attribute values to modify the information
++// associated with an assembly.
++[assembly: AssemblyTitle("DXApplication1")]
++[assembly: AssemblyDescription("")]
++[assembly: AssemblyConfiguration("")]
++[assembly: AssemblyCompany("")]
++[assembly: AssemblyProduct("DXApplication1")]
++[assembly: AssemblyCopyright("Copyright ©  2019")]
++[assembly: AssemblyTrademark("")]
++[assembly: AssemblyCulture("")]
++
++// Setting ComVisible to false makes the types in this assembly not visible 
++// to COM components.  If you need to access a type in this assembly from 
++// COM, set the ComVisible attribute to true on that type.
++[assembly: ComVisible(false)]
++
++// The following GUID is for the ID of the typelib if this project is exposed to COM
++[assembly: Guid("9006f149-aa49-4b8e-ba69-386d945fa738")]
++
++// Version information for an assembly consists of the following four values:
++//
++//      Major Version
++//      Minor Version 
++//      Build Number
++//      Revision
++//
++// You can specify all the values or you can default the Build and Revision Numbers 
++// by using the '*' as shown below:
++// [assembly: AssemblyVersion("1.0.*")]
++[assembly: AssemblyVersion("1.0.0.0")]
++[assembly: AssemblyFileVersion("1.0.0.0")]
+diff --git a/DXApplication1/DXApplication1/Properties/Resources.Designer.cs b/DXApplication1/DXApplication1/Properties/Resources.Designer.cs
+new file mode 100644
+index 0000000..9b2b067
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Properties/Resources.Designer.cs
+@@ -0,0 +1,71 @@
++﻿//------------------------------------------------------------------------------
++// <auto-generated>
++//     This code was generated by a tool.
++//     Runtime Version:4.0.30319.18034
++//
++//     Changes to this file may cause incorrect behavior and will be lost if
++//     the code is regenerated.
++// </auto-generated>
++//------------------------------------------------------------------------------
++
++namespace DXApplication1.Properties
++{
++
++
++    /// <summary>
++    ///   A strongly-typed resource class, for looking up localized strings, etc.
++    /// </summary>
++    // This class was auto-generated by the StronglyTypedResourceBuilder
++    // class via a tool like ResGen or Visual Studio.
++    // To add or remove a member, edit your .ResX file then rerun ResGen
++    // with the /str option, or rebuild your VS project.
++    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
++    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
++    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
++    internal class Resources
++    {
++
++        private static global::System.Resources.ResourceManager resourceMan;
++
++        private static global::System.Globalization.CultureInfo resourceCulture;
++
++        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
++        internal Resources()
++        {
++        }
++
++        /// <summary>
++        ///   Returns the cached ResourceManager instance used by this class.
++        /// </summary>
++        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
++        internal static global::System.Resources.ResourceManager ResourceManager
++        {
++            get
++            {
++                if ((resourceMan == null))
++                {
++                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DXApplication1.Properties.Resources", typeof(Resources).Assembly);
++                    resourceMan = temp;
++                }
++                return resourceMan;
++            }
++        }
++
++        /// <summary>
++        ///   Overrides the current thread's CurrentUICulture property for all
++        ///   resource lookups using this strongly typed resource class.
++        /// </summary>
++        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
++        internal static global::System.Globalization.CultureInfo Culture
++        {
++            get
++            {
++                return resourceCulture;
++            }
++            set
++            {
++                resourceCulture = value;
++            }
++        }
++    }
++}
+diff --git a/DXApplication1/DXApplication1/Properties/Resources.resx b/DXApplication1/DXApplication1/Properties/Resources.resx
+new file mode 100644
+index 0000000..af7dbeb
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Properties/Resources.resx
+@@ -0,0 +1,117 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<root>
++  <!-- 
++    Microsoft ResX Schema 
++    
++    Version 2.0
++    
++    The primary goals of this format is to allow a simple XML format 
++    that is mostly human readable. The generation and parsing of the 
++    various data types are done through the TypeConverter classes 
++    associated with the data types.
++    
++    Example:
++    
++    ... ado.net/XML headers & schema ...
++    <resheader name="resmimetype">text/microsoft-resx</resheader>
++    <resheader name="version">2.0</resheader>
++    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
++    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
++    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
++    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
++    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
++        <value>[base64 mime encoded serialized .NET Framework object]</value>
++    </data>
++    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
++        <comment>This is a comment</comment>
++    </data>
++                
++    There are any number of "resheader" rows that contain simple 
++    name/value pairs.
++    
++    Each data row contains a name, and value. The row also contains a 
++    type or mimetype. Type corresponds to a .NET class that support 
++    text/value conversion through the TypeConverter architecture. 
++    Classes that don't support this are serialized and stored with the 
++    mimetype set.
++    
++    The mimetype is used for serialized objects, and tells the 
++    ResXResourceReader how to depersist the object. This is currently not 
++    extensible. For a given mimetype the value must be set accordingly:
++    
++    Note - application/x-microsoft.net.object.binary.base64 is the format 
++    that the ResXResourceWriter will generate, however the reader can 
++    read any of the formats listed below.
++    
++    mimetype: application/x-microsoft.net.object.binary.base64
++    value   : The object must be serialized with 
++            : System.Serialization.Formatters.Binary.BinaryFormatter
++            : and then encoded with base64 encoding.
++    
++    mimetype: application/x-microsoft.net.object.soap.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
++            : and then encoded with base64 encoding.
++
++    mimetype: application/x-microsoft.net.object.bytearray.base64
++    value   : The object must be serialized into a byte array 
++            : using a System.ComponentModel.TypeConverter
++            : and then encoded with base64 encoding.
++    -->
++  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
++    <xsd:element name="root" msdata:IsDataSet="true">
++      <xsd:complexType>
++        <xsd:choice maxOccurs="unbounded">
++          <xsd:element name="metadata">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" />
++              <xsd:attribute name="type" type="xsd:string" />
++              <xsd:attribute name="mimetype" type="xsd:string" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="assembly">
++            <xsd:complexType>
++              <xsd:attribute name="alias" type="xsd:string" />
++              <xsd:attribute name="name" type="xsd:string" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="data">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
++              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
++              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="resheader">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" />
++            </xsd:complexType>
++          </xsd:element>
++        </xsd:choice>
++      </xsd:complexType>
++    </xsd:element>
++  </xsd:schema>
++  <resheader name="resmimetype">
++    <value>text/microsoft-resx</value>
++  </resheader>
++  <resheader name="version">
++    <value>2.0</value>
++  </resheader>
++  <resheader name="reader">
++    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <resheader name="writer">
++    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++</root>
+\ No newline at end of file
+diff --git a/DXApplication1/DXApplication1/Properties/Settings.Designer.cs b/DXApplication1/DXApplication1/Properties/Settings.Designer.cs
+new file mode 100644
+index 0000000..6f56154
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Properties/Settings.Designer.cs
+@@ -0,0 +1,30 @@
++﻿//------------------------------------------------------------------------------
++// <auto-generated>
++//     This code was generated by a tool.
++//     Runtime Version:4.0.30319.18034
++//
++//     Changes to this file may cause incorrect behavior and will be lost if
++//     the code is regenerated.
++// </auto-generated>
++//------------------------------------------------------------------------------
++
++namespace DXApplication1.Properties
++{
++
++
++    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
++    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0")]
++    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
++    {
++
++        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
++
++        public static Settings Default
++        {
++            get
++            {
++                return defaultInstance;
++            }
++        }
++    }
++}
+diff --git a/DXApplication1/DXApplication1/Properties/Settings.settings b/DXApplication1/DXApplication1/Properties/Settings.settings
+new file mode 100644
+index 0000000..3964565
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Properties/Settings.settings
+@@ -0,0 +1,7 @@
++﻿<?xml version='1.0' encoding='utf-8'?>
++<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
++  <Profiles>
++    <Profile Name="(Default)" />
++  </Profiles>
++  <Settings />
++</SettingsFile>
+diff --git a/DXApplication1/DXApplication1/Properties/licenses.licx b/DXApplication1/DXApplication1/Properties/licenses.licx
+new file mode 100644
+index 0000000..534efe9
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Properties/licenses.licx
+@@ -0,0 +1,2 @@
++DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
++DevExpress.XtraBars.Docking2010.DocumentManager, DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+diff --git a/DXApplication1/DXApplication1/Reservation.Designer.cs b/DXApplication1/DXApplication1/Reservation.Designer.cs
+new file mode 100644
+index 0000000..31c44f4
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Reservation.Designer.cs
+@@ -0,0 +1,46 @@
++﻿namespace DXApplication1
++{
++    partial class Reservation
++    {
++        /// <summary>
++        /// Required designer variable.
++        /// </summary>
++        private System.ComponentModel.IContainer components = null;
++
++        /// <summary>
++        /// Clean up any resources being used.
++        /// </summary>
++        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
++        protected override void Dispose(bool disposing)
++        {
++            if (disposing && (components != null))
++            {
++                components.Dispose();
++            }
++            base.Dispose(disposing);
++        }
++
++        #region Windows Form Designer generated code
++
++        /// <summary>
++        /// Required method for Designer support - do not modify
++        /// the contents of this method with the code editor.
++        /// </summary>
++        private void InitializeComponent()
++        {
++            this.SuspendLayout();
++            // 
++            // Reservation
++            // 
++            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
++            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
++            this.ClientSize = new System.Drawing.Size(659, 301);
++            this.Name = "Reservation";
++            this.Text = "Бронирование";
++            this.ResumeLayout(false);
++
++        }
++
++        #endregion
++    }
++}
+\ No newline at end of file
+diff --git a/DXApplication1/DXApplication1/Reservation.cs b/DXApplication1/DXApplication1/Reservation.cs
+new file mode 100644
+index 0000000..45bfd5c
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Reservation.cs
+@@ -0,0 +1,21 @@
++﻿using System;
++using System.Collections.Generic;
++using System.ComponentModel;
++using System.Data;
++using System.Drawing;
++using System.Text;
++using System.Linq;
++using System.Threading.Tasks;
++using System.Windows.Forms;
++using DevExpress.XtraEditors;
++
++namespace DXApplication1
++{
++    public partial class Reservation : DevExpress.XtraEditors.XtraForm
++    {
++        public Reservation()
++        {
++            InitializeComponent();
++        }
++    }
++}
+\ No newline at end of file
+diff --git a/DXApplication1/DXApplication1/Reservation.resx b/DXApplication1/DXApplication1/Reservation.resx
+new file mode 100644
+index 0000000..1af7de1
+--- /dev/null
++++ b/DXApplication1/DXApplication1/Reservation.resx
+@@ -0,0 +1,120 @@
++﻿<?xml version="1.0" encoding="utf-8"?>
++<root>
++  <!-- 
++    Microsoft ResX Schema 
++    
++    Version 2.0
++    
++    The primary goals of this format is to allow a simple XML format 
++    that is mostly human readable. The generation and parsing of the 
++    various data types are done through the TypeConverter classes 
++    associated with the data types.
++    
++    Example:
++    
++    ... ado.net/XML headers & schema ...
++    <resheader name="resmimetype">text/microsoft-resx</resheader>
++    <resheader name="version">2.0</resheader>
++    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
++    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
++    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
++    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
++    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
++        <value>[base64 mime encoded serialized .NET Framework object]</value>
++    </data>
++    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
++        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
++        <comment>This is a comment</comment>
++    </data>
++                
++    There are any number of "resheader" rows that contain simple 
++    name/value pairs.
++    
++    Each data row contains a name, and value. The row also contains a 
++    type or mimetype. Type corresponds to a .NET class that support 
++    text/value conversion through the TypeConverter architecture. 
++    Classes that don't support this are serialized and stored with the 
++    mimetype set.
++    
++    The mimetype is used for serialized objects, and tells the 
++    ResXResourceReader how to depersist the object. This is currently not 
++    extensible. For a given mimetype the value must be set accordingly:
++    
++    Note - application/x-microsoft.net.object.binary.base64 is the format 
++    that the ResXResourceWriter will generate, however the reader can 
++    read any of the formats listed below.
++    
++    mimetype: application/x-microsoft.net.object.binary.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
++            : and then encoded with base64 encoding.
++    
++    mimetype: application/x-microsoft.net.object.soap.base64
++    value   : The object must be serialized with 
++            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
++            : and then encoded with base64 encoding.
++
++    mimetype: application/x-microsoft.net.object.bytearray.base64
++    value   : The object must be serialized into a byte array 
++            : using a System.ComponentModel.TypeConverter
++            : and then encoded with base64 encoding.
++    -->
++  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
++    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
++    <xsd:element name="root" msdata:IsDataSet="true">
++      <xsd:complexType>
++        <xsd:choice maxOccurs="unbounded">
++          <xsd:element name="metadata">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" />
++              </xsd:sequence>
++              <xsd:attribute name="name" use="required" type="xsd:string" />
++              <xsd:attribute name="type" type="xsd:string" />
++              <xsd:attribute name="mimetype" type="xsd:string" />
++              <xsd:attribute ref="xml:space" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="assembly">
++            <xsd:complexType>
++              <xsd:attribute name="alias" type="xsd:string" />
++              <xsd:attribute name="name" type="xsd:string" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="data">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
++              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
++              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
++              <xsd:attribute ref="xml:space" />
++            </xsd:complexType>
++          </xsd:element>
++          <xsd:element name="resheader">
++            <xsd:complexType>
++              <xsd:sequence>
++                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
++              </xsd:sequence>
++              <xsd:attribute name="name" type="xsd:string" use="required" />
++            </xsd:complexType>
++          </xsd:element>
++        </xsd:choice>
++      </xsd:complexType>
++    </xsd:element>
++  </xsd:schema>
++  <resheader name="resmimetype">
++    <value>text/microsoft-resx</value>
++  </resheader>
++  <resheader name="version">
++    <value>2.0</value>
++  </resheader>
++  <resheader name="reader">
++    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++  <resheader name="writer">
++    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
++  </resheader>
++</root>
+\ No newline at end of file
+-- 
+2.21.0.windows.1
+

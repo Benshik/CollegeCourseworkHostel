@@ -8,8 +8,8 @@
     <ProjectGuid>{CA7D97F6-8BED-40AD-8A36-9F415414D4F6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DXApplication1</RootNamespace>
-    <AssemblyName>DXApplication1</AssemblyName>
+    <RootNamespace>CollegeCourseworkHostel</RootNamespace>
+    <AssemblyName>CollegeCourseworkHostel</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -78,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
