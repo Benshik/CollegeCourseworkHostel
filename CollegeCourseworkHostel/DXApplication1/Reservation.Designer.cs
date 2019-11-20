@@ -58,7 +58,7 @@
             // lookUpEdit1
             // 
             this.lookUpEdit1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lookUpEdit1.Location = new System.Drawing.Point(475, 232);
+            this.lookUpEdit1.Location = new System.Drawing.Point(477, 269);
             this.lookUpEdit1.Name = "lookUpEdit1";
             this.lookUpEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.lookUpEdit1.Properties.Appearance.Options.UseFont = true;
@@ -70,7 +70,7 @@
             // lookUpEdit2
             // 
             this.lookUpEdit2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lookUpEdit2.Location = new System.Drawing.Point(475, 263);
+            this.lookUpEdit2.Location = new System.Drawing.Point(477, 300);
             this.lookUpEdit2.Name = "lookUpEdit2";
             this.lookUpEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.lookUpEdit2.Properties.Appearance.Options.UseFont = true;
@@ -84,7 +84,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label7.Location = new System.Drawing.Point(76, 266);
+            this.label7.Location = new System.Drawing.Point(78, 303);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 19);
             this.label7.TabIndex = 10;
@@ -95,7 +95,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label2.Location = new System.Drawing.Point(382, 201);
+            this.label2.Location = new System.Drawing.Point(384, 238);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(238, 23);
             this.label2.TabIndex = 28;
@@ -106,7 +106,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label6.Location = new System.Drawing.Point(76, 235);
+            this.label6.Location = new System.Drawing.Point(78, 272);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 19);
             this.label6.TabIndex = 9;
@@ -116,7 +116,7 @@
             // 
             this.dateEdit1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(111, 232);
+            this.dateEdit1.Location = new System.Drawing.Point(113, 269);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dateEdit1.Properties.Appearance.Options.UseFont = true;
@@ -132,7 +132,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label10.Location = new System.Drawing.Point(382, 235);
+            this.label10.Location = new System.Drawing.Point(384, 272);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 19);
             this.label10.TabIndex = 21;
@@ -143,7 +143,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label5.Location = new System.Drawing.Point(70, 200);
+            this.label5.Location = new System.Drawing.Point(72, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(279, 23);
             this.label5.TabIndex = 8;
@@ -153,7 +153,7 @@
             // 
             this.dateEdit2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(111, 263);
+            this.dateEdit2.Location = new System.Drawing.Point(113, 300);
             this.dateEdit2.Name = "dateEdit2";
             this.dateEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.dateEdit2.Properties.Appearance.Options.UseFont = true;
@@ -169,7 +169,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label8.Location = new System.Drawing.Point(384, 266);
+            this.label8.Location = new System.Drawing.Point(386, 303);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 19);
             this.label8.TabIndex = 22;
@@ -179,7 +179,7 @@
             // 
             this.searchLookUpEdit2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.searchLookUpEdit2.EditValue = "Создать клиента";
-            this.searchLookUpEdit2.Location = new System.Drawing.Point(111, 118);
+            this.searchLookUpEdit2.Location = new System.Drawing.Point(113, 155);
             this.searchLookUpEdit2.Name = "searchLookUpEdit2";
             this.searchLookUpEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.searchLookUpEdit2.Properties.Appearance.Options.UseFont = true;
@@ -201,7 +201,7 @@
             this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
             this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(592, 117);
+            this.simpleButton2.Location = new System.Drawing.Point(594, 154);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(28, 28);
             this.simpleButton2.TabIndex = 26;
@@ -211,7 +211,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label1.Location = new System.Drawing.Point(70, 88);
+            this.label1.Location = new System.Drawing.Point(72, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 23);
             this.label1.TabIndex = 29;
@@ -222,7 +222,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 18F);
-            this.label9.Location = new System.Drawing.Point(297, 17);
+            this.label9.Location = new System.Drawing.Point(299, 54);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(271, 29);
             this.label9.TabIndex = 17;
@@ -236,7 +236,7 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            this.simpleButton1.Location = new System.Drawing.Point(654, 88);
+            this.simpleButton1.Location = new System.Drawing.Point(656, 125);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Padding = new System.Windows.Forms.Padding(3);
             this.simpleButton1.Size = new System.Drawing.Size(139, 201);

@@ -169,8 +169,8 @@
             // 
             this.btnReservation.Caption = "Бронирование";
             this.btnReservation.Id = 11;
-            this.btnReservation.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBronirovanie.ImageOptions.Image")));
-            this.btnReservation.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBronirovanie.ImageOptions.LargeImage")));
+            this.btnReservation.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnReservation.ImageOptions.Image")));
+            this.btnReservation.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnReservation.ImageOptions.LargeImage")));
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBronirovanie_ItemClick);
             // 
