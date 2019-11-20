@@ -1,4 +1,4 @@
-﻿namespace DXApplication1
+﻿namespace CollegeCourseworkHostel
 {
     partial class Reservation
     {

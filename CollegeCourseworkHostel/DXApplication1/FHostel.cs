@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace DXApplication1
+namespace CollegeCourseworkHostel
 {
     public partial class fHostel : DevExpress.XtraEditors.XtraForm
     {
@@ -26,6 +26,13 @@ namespace DXApplication1
 
             // Показывает окно.
             reservation.Show();
+        }
+
+        private void btnClients_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            JournalClient journalClient = new JournalClient();
+            journalClient.MdiParent = this;
+            journalClient.Show();   
         }
     }
 }

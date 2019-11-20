@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
 namespace CollegeCourseworkHostel
 {
-    public partial class Reservation : DevExpress.XtraEditors.XtraForm
+    public partial class JournalClient : DevExpress.XtraEditors.XtraForm
     {
-        public Reservation()
+        public JournalClient()
         {
             InitializeComponent();
         }
-
     }
 }

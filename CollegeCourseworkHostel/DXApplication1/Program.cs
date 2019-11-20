@@ -6,7 +6,7 @@ using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 
-namespace DXApplication1
+namespace CollegeCourseworkHostel
 {
     static class Program
     {
