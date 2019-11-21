@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace CollegeCourseworkHostel
 {
-    public partial class fHostel : DevExpress.XtraEditors.XtraForm
+    public partial class Hostel : DevExpress.XtraEditors.XtraForm
     {
-        public fHostel()
+        public Hostel()
         {
             InitializeComponent();
         }

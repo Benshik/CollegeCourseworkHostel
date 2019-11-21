@@ -22,7 +22,7 @@ namespace CollegeCourseworkHostel
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new fHostel());
+            Application.Run(new Hostel());
         }
     }
 }

@@ -18,5 +18,15 @@ namespace CollegeCourseworkHostel
             InitializeComponent();
         }
 
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            {
+                // Cоздаем экземпляр класса Reservation.
+                ClientEdit newclientadd = new ClientEdit();
+
+                // Показывает окно.
+                newclientadd.Show();
+            }
+        }
     }
 }

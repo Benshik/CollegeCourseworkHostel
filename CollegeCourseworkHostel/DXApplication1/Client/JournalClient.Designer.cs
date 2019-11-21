@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JournalClient));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnClientAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnClientEdit = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -45,13 +45,35 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.simpleButton1);
-            this.panelControl1.Controls.Add(this.simpleButton2);
+            this.panelControl1.Controls.Add(this.btnClientAdd);
+            this.panelControl1.Controls.Add(this.btnClientEdit);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelControl1.Location = new System.Drawing.Point(691, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(109, 450);
             this.panelControl1.TabIndex = 0;
+            // 
+            // btnClientAdd
+            // 
+            this.btnClientAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnClientAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClientAdd.ImageOptions.Image")));
+            this.btnClientAdd.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnClientAdd.Location = new System.Drawing.Point(2, 0);
+            this.btnClientAdd.Name = "btnClientAdd";
+            this.btnClientAdd.Size = new System.Drawing.Size(105, 210);
+            this.btnClientAdd.TabIndex = 42;
+            this.btnClientAdd.Click += new System.EventHandler(this.btnClientAdd_Click);
+            // 
+            // btnClientEdit
+            // 
+            this.btnClientEdit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnClientEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClientEdit.ImageOptions.Image")));
+            this.btnClientEdit.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnClientEdit.Location = new System.Drawing.Point(2, 210);
+            this.btnClientEdit.Name = "btnClientEdit";
+            this.btnClientEdit.Size = new System.Drawing.Size(105, 238);
+            this.btnClientEdit.TabIndex = 41;
+            this.btnClientEdit.Click += new System.EventHandler(this.btnClientEdit_Click);
             // 
             // panelControl2
             // 
@@ -78,26 +100,6 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(2, 210);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(105, 238);
-            this.simpleButton2.TabIndex = 41;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(2, 0);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(105, 210);
-            this.simpleButton1.TabIndex = 42;
-            // 
             // JournalClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,7 +125,7 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnClientAdd;
+        private DevExpress.XtraEditors.SimpleButton btnClientEdit;
     }
 }

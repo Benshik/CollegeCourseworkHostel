@@ -205,6 +205,7 @@
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(28, 28);
             this.simpleButton2.TabIndex = 26;
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // label1
             // 
