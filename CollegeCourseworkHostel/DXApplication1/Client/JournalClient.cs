@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CollegeCourseworkHostel.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace CollegeCourseworkHostel
         public JournalClient()
         {
             InitializeComponent();
+            LoadJJournalClient();
         }
 
         private void btnClientEdit_Click(object sender, EventArgs e)
@@ -33,6 +35,19 @@ namespace CollegeCourseworkHostel
 
             // Показывает окно.
             clientadd.Show();
+        }
+
+        private void LoadJJournalClient()
+        {
+            SQLAdapter sqlAdapter = new SQLAdapter();
+
+            // Создали пустую таблицу с названием allClientsDT 
+            DataTable allClientsDT = new DataTable();
+
+            // В таблицу allClientsDT помещаем результат метода SelectData
+            // В метот SelectData передаем строковую переменную с класса Query - SelectAllClients
+            // Метод SelectData возвращает запрошеннуб таблицу
+            allClientsDT = sqlAdapter.SelectData(Query.SelectAllClients);
         }
     }
 }

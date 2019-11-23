@@ -106,6 +106,8 @@
     <Compile Include="Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Service\Query.cs" />
+    <Compile Include="Service\SQLAdapter.cs" />
     <EmbeddedResource Include="Client\ClientEdit.resx">
       <DependentUpon>ClientEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,7 +132,12 @@
       <DependentUpon>Reservation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="HostelDB.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
