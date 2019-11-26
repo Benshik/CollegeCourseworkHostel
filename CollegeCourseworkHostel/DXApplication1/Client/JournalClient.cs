@@ -48,6 +48,9 @@ namespace CollegeCourseworkHostel
             // В метот SelectData передаем строковую переменную с класса Query - SelectAllClients
             // Метод SelectData возвращает запрошеннуб таблицу
             allClientsDT = sqlAdapter.SelectData(Query.SelectAllClients);
+
+            // Выводим БД в форму.
+            gridControlClients.DataSource = allClientsDT;
         }
     }
 }

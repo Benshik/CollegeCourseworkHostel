@@ -31,8 +31,15 @@ namespace CollegeCourseworkHostel.Service
 
             // Открываем соеденение.
             dbConnection.Open();
+
+            // отправляем комманду в БД
             SQLiteCommand command = new SQLiteCommand(query, dbConnection);
+
+            // создаем Реадер, который считывает результат запроса
             SQLiteDataReader reader = command.ExecuteReader();
+
+            // Загружаем полученные данные из reader в resultDT (таблицу).
+            resultDT.Load(reader);
 
             // Закрываем соеденение с БД
             dbConnection.Close();

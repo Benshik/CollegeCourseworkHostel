@@ -8,6 +8,6 @@ namespace CollegeCourseworkHostel.Service
 {
     static class Query
     {
-        public static string SelectAllClients = "null";
+        public static string SelectAllClients = "SELECT * from Client";
     }
 }
