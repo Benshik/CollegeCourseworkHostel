@@ -6,3 +6,16 @@ CREATE TABLE "Client" (
 	"Birthday"	TEXT NOT NULL,
 	"Gender"	TEXT NOT NULL
 );
+
+
+
+DROP VIEW VClientInformation;
+
+CREATE VIEW VClientInformation As
+SELECT 
+ id,
+ SecondName || " " || FirstName As FullName, 
+ Birthday,
+ Gender
+FROM Client
+ORDER by Birthday;

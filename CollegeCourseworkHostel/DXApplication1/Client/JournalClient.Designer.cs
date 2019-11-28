@@ -35,14 +35,14 @@
             this.btnClientEdit = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gridControlClients = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewClients = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlClients)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,17 +91,18 @@
             // 
             this.gridControlClients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControlClients.Location = new System.Drawing.Point(2, 2);
-            this.gridControlClients.MainView = this.gridView1;
+            this.gridControlClients.MainView = this.gridViewClients;
             this.gridControlClients.Name = "gridControlClients";
             this.gridControlClients.Size = new System.Drawing.Size(687, 446);
             this.gridControlClients.TabIndex = 0;
             this.gridControlClients.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridViewClients});
             // 
-            // gridView1
+            // gridViewClients
             // 
-            this.gridView1.GridControl = this.gridControlClients;
-            this.gridView1.Name = "gridView1";
+            this.gridViewClients.GridControl = this.gridControlClients;
+            this.gridViewClients.Name = "gridViewClients";
+            this.gridViewClients.OptionsBehavior.Editable = false;
             // 
             // JournalClient
             // 
@@ -117,7 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlClients)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewClients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -130,7 +131,7 @@
         private DevExpress.XtraGrid.GridControl gridControlClients;
         private DevExpress.XtraEditors.SimpleButton btnClientAdd;
         private DevExpress.XtraEditors.SimpleButton btnClientEdit;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewClients;
         private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

@@ -39,7 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.label8 = new System.Windows.Forms.Label();
-            this.searchLookUpEdit2 = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEditClient = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEditClient.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2View)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,19 +175,20 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Кровать";
             // 
-            // searchLookUpEdit2
+            // searchLookUpEditClient
             // 
-            this.searchLookUpEdit2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.searchLookUpEdit2.EditValue = "Создать клиента";
-            this.searchLookUpEdit2.Location = new System.Drawing.Point(113, 155);
-            this.searchLookUpEdit2.Name = "searchLookUpEdit2";
-            this.searchLookUpEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.searchLookUpEdit2.Properties.Appearance.Options.UseFont = true;
-            this.searchLookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.searchLookUpEditClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.searchLookUpEditClient.EditValue = "Создать клиента";
+            this.searchLookUpEditClient.Location = new System.Drawing.Point(113, 155);
+            this.searchLookUpEditClient.Name = "searchLookUpEditClient";
+            this.searchLookUpEditClient.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.searchLookUpEditClient.Properties.Appearance.Options.UseFont = true;
+            this.searchLookUpEditClient.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.searchLookUpEdit2.Properties.View = this.searchLookUpEdit2View;
-            this.searchLookUpEdit2.Size = new System.Drawing.Size(475, 26);
-            this.searchLookUpEdit2.TabIndex = 25;
+            this.searchLookUpEditClient.Properties.View = this.searchLookUpEdit2View;
+            this.searchLookUpEditClient.Size = new System.Drawing.Size(475, 26);
+            this.searchLookUpEditClient.TabIndex = 25;
+            this.searchLookUpEditClient.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.searchLookUpEditClient_ButtonClick);
             // 
             // searchLookUpEdit2View
             // 
@@ -254,7 +255,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.searchLookUpEdit2);
+            this.Controls.Add(this.searchLookUpEditClient);
             this.Controls.Add(this.lookUpEdit1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lookUpEdit2);
@@ -272,7 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEditClient.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -291,7 +292,7 @@
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.DateEdit dateEdit2;
         private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEdit2;
+        private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEditClient;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit2View;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.Label label1;

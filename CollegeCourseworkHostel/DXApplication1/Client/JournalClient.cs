@@ -21,8 +21,11 @@ namespace CollegeCourseworkHostel
 
         private void btnClientEdit_Click(object sender, EventArgs e)
         {
+            // Создал переменную для проверки окна редактирования (false), и окна добавления клиента (true)
+            bool isNewClient = false;
+
             // Cоздаем экземпляр класса Reservation.
-            ClientEdit clientedit = new ClientEdit();
+            ClientEdit clientedit = new ClientEdit(isNewClient);
 
             // Показывает окно.
             clientedit.Show();
@@ -30,8 +33,11 @@ namespace CollegeCourseworkHostel
 
         private void btnClientAdd_Click(object sender, EventArgs e)
         {
+            // Создал переменную для проверки окна редактирования (false), и окна добавления клиента (true)
+            bool isNewClient = true;
+
             // Cоздаем экземпляр класса Reservation.
-            ClientEdit clientadd = new ClientEdit();
+            ClientEdit clientadd = new ClientEdit(isNewClient);
 
             // Показывает окно.
             clientadd.Show();
@@ -51,6 +57,7 @@ namespace CollegeCourseworkHostel
 
             // Выводим БД в форму.
             gridControlClients.DataSource = allClientsDT;
+            gridViewClients.Columns["id"].Visible = false;
         }
     }
 }

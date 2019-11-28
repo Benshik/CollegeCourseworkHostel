@@ -9,5 +9,6 @@ namespace CollegeCourseworkHostel.Service
     static class Query
     {
         public static string SelectAllClients = "SELECT * from Client";
+        public static string ClientInformation = "SELECT * from VClientInformation";
     }
 }
