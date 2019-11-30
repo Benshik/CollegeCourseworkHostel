@@ -29,7 +29,6 @@ namespace CollegeCourseworkHostel
 
             // Показывает окно.
             newclientadd.Show();
-
         }
 
         private void LoadJJournalClient()

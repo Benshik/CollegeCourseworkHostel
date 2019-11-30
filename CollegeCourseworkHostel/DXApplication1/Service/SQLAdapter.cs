@@ -46,17 +46,38 @@ namespace CollegeCourseworkHostel.Service
             return resultDT;
         }
 
+        public DataRow SelectActiveRow(string query)
+        {
+            // Создаем пустую таблицу.
+            DataTable resultDT = new DataTable();
+
+            // Открываем соеденение.
+            dbConnection.Open();
+
+            // отправляем комманду в БД
+            SQLiteCommand command = new SQLiteCommand(query, dbConnection);
+
+            // создаем Реадер, который считывает результат запроса
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            // Загружаем полученные данные из reader в resultDT (таблицу).
+            resultDT.Load(reader);
+
+            // Закрываем соеденение с БД
+            dbConnection.Close();
+            return resultDT.Rows[0];
+        }
+
         public void RunQuery(string query)
         {
             // Открываем соеденение.
             dbConnection.Open();
             SQLiteCommand command = new SQLiteCommand(query, dbConnection);
-            SQLiteDataReader wreader = command.ExecuteReader();
+            command.CommandText = query;
+            command.ExecuteNonQuery();
 
             // Закрываем соеденение с БД
             dbConnection.Close();
         }
-
-
     }
 }

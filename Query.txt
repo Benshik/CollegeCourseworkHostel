@@ -19,3 +19,14 @@ SELECT
  Gender
 FROM Client
 ORDER by Birthday;
+
+CREATE VIEW VReservesationInfo AS
+SELECT 
+Client.SecondName || " " || Client.FirstName As FullName,
+Сouchette.Room,
+Сouchette.idСouchette as numBed,
+Reservation.Cost as costOrder
+ FROM Reservation
+ JOIN Client ON Client.id = Reservation.idClient
+ JOIN Сouchette ON Сouchette.idСouchette = Reservation.idCouchete
+

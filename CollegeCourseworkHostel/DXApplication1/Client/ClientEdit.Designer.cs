@@ -40,6 +40,7 @@
             this.textEditFirstName = new DevExpress.XtraEditors.TextEdit();
             this.textEditMiddleName = new DevExpress.XtraEditors.TextEdit();
             this.dateEditBirthday = new DevExpress.XtraEditors.DateEdit();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.textEditSecondName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditMiddleName.Properties)).BeginInit();
@@ -162,11 +163,24 @@
             this.dateEditBirthday.Size = new System.Drawing.Size(185, 20);
             this.dateEditBirthday.TabIndex = 45;
             // 
+            // comboBoxGender
+            // 
+            this.comboBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Items.AddRange(new object[] {
+            "Мужской",
+            "Женский"});
+            this.comboBoxGender.Location = new System.Drawing.Point(184, 228);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(185, 21);
+            this.comboBoxGender.TabIndex = 46;
+            // 
             // ClientEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 339);
+            this.Controls.Add(this.comboBoxGender);
             this.Controls.Add(this.dateEditBirthday);
             this.Controls.Add(this.textEditMiddleName);
             this.Controls.Add(this.textEditFirstName);
@@ -204,5 +218,6 @@
         private DevExpress.XtraEditors.TextEdit textEditFirstName;
         private DevExpress.XtraEditors.TextEdit textEditMiddleName;
         private DevExpress.XtraEditors.DateEdit dateEditBirthday;
+        private System.Windows.Forms.ComboBox comboBoxGender;
     }
 }

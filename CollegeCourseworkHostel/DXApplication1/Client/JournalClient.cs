@@ -16,7 +16,7 @@ namespace CollegeCourseworkHostel
         public JournalClient()
         {
             InitializeComponent();
-            LoadJJournalClient();
+            LoadJournalClient();
         }
 
         private void btnClientEdit_Click(object sender, EventArgs e)
@@ -24,11 +24,20 @@ namespace CollegeCourseworkHostel
             // Создал переменную для проверки окна редактирования (false), и окна добавления клиента (true)
             bool isNewClient = false;
 
-            // Cоздаем экземпляр класса Reservation.
-            ClientEdit clientedit = new ClientEdit(isNewClient);
+            int idClient = GetActiveIdClient();
+
+                // Cоздаем экземпляр класса Reservation.
+                ClientEdit client = new ClientEdit(isNewClient, idClient);
+
+            // включаем возможность этой форме отслеживать  форму редактирования клиента       
+            client.Owner = this;
+
+            // указываем, что при событие закрытия окна редактирования клиента, вызывается метод Client_FormClosed
+            // который снова загрузит всех клиентов уже с новым клиентов
+            client.FormClosed += Client_FormClosed;
 
             // Показывает окно.
-            clientedit.Show();
+            client.Show();       
         }
 
         private void btnClientAdd_Click(object sender, EventArgs e)
@@ -37,14 +46,26 @@ namespace CollegeCourseworkHostel
             bool isNewClient = true;
 
             // Cоздаем экземпляр класса Reservation.
-            ClientEdit clientadd = new ClientEdit(isNewClient);
+            ClientEdit client = new ClientEdit(isNewClient);
 
-            // Показывает окно.
-            clientadd.Show();
+            // включаем возможность этой форме отслеживать  форму редактирования клиента       
+            client.Owner = this;
+
+            // указываем, что при событие закрытия окна редактирования клиента, вызывается метод Client_FormClosed
+            // который снова загрузит всех клиентов уже с новым клиентов
+            client.FormClosed += Client_FormClosed;
+
+            // Показываем окно редактирвоания клиента.
+            client.Show();
         }
 
-        private void LoadJJournalClient()
+        private void Client_FormClosed(object sender, FormClosedEventArgs e)
         {
+            LoadJournalClient();
+        }
+
+        public void LoadJournalClient()
+        {    
             SQLAdapter sqlAdapter = new SQLAdapter();
 
             // Создали пустую таблицу с названием allClientsDT 
@@ -55,9 +76,24 @@ namespace CollegeCourseworkHostel
             // Метод SelectData возвращает запрошеннуб таблицу
             allClientsDT = sqlAdapter.SelectData(Query.SelectAllClients);
 
-            // Выводим БД в форму.
+            // очищаем журнал клиентов
+            gridControlClients.DataSource = null;
+
+            // передаем таблице на форме  таблицу allClientsDT
             gridControlClients.DataSource = allClientsDT;
+
+            // отключаем видимость столбца id
             gridViewClients.Columns["id"].Visible = false;
+        }
+
+        private int GetActiveIdClient()
+        {
+            int rowIndex = gridViewClients.GetSelectedRows()[0];
+            DataRow selectedRow = gridViewClients.GetDataRow(rowIndex);
+
+            int result = int.Parse(selectedRow["id"].ToString());
+
+            return result;
         }
     }
 }
