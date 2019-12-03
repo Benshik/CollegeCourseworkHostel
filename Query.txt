@@ -5,28 +5,67 @@ CREATE TABLE "Client" (
 	"MiddleName"	TEXT,
 	"Birthday"	TEXT NOT NULL,
 	"Gender"	TEXT NOT NULL
-);
+)____________________________________________________________
 
+CREATE TABLE "Couchette" (
+	"idСouchette"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	"Room"	INTEGER NOT NULL,
+	"Bed"	INTEGER
+)
 
+___________________________________________________________________
 
-DROP VIEW VClientInformation;
+CREATE TABLE "GuestBedsAccounting" (
+	"idReservation"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	"idClient"	INTEGER NOT NULL,
+	"idCouchete"	INTEGER NOT NULL,
+	"Cost"	NUMERIC NOT NULL,
+	"DateArrival"	TEXT,
+	"DateDeparture"	TEXT
+)
 
+____________________________________________________________________
+____________________________________________________________________
+CREATE VIEW VBisyBedLoad As
+SELECT 
+Couchette.idСouchette,
+Couchette.Room,
+Couchette.Bed,
+GuestBedsAccounting.DateArrival,
+GuestBedsAccounting.DateDeparture
+FROM Couchette 
+JOIN GuestBedsAccounting 
+ON GuestBedsAccounting.idCouchete = Couchette.idСouchette
+_____________________________________________________________________
 CREATE VIEW VClientInformation As
 SELECT 
  id,
- SecondName || " " || FirstName As FullName, 
- Birthday,
- Gender
+ SecondName || " " || FirstName As Клиент, 
+ Birthday as "Дата  рождения",
+ Gender as Пол
 FROM Client
-ORDER by Birthday;
-
-CREATE VIEW VReservesationInfo AS
+ORDER by Клиент
+_________________________________________________________________________
+CREATE VIEW VFullClientInformation As
 SELECT 
-Client.SecondName || " " || Client.FirstName As FullName,
-Сouchette.Room,
-Сouchette.idСouchette as numBed,
-Reservation.Cost as costOrder
- FROM Reservation
- JOIN Client ON Client.id = Reservation.idClient
- JOIN Сouchette ON Сouchette.idСouchette = Reservation.idCouchete
-
+Client.id,
+Client.FirstName as Имя,
+Client.SecondName as Фамилия,
+Client.MiddleName as О́тчество,
+Client.Gender as Пол,
+Client.Birthday as "Дата рождения"
+FROM Client
+ORDER by SecondName
+____________________________________________________________________________
+CREATE VIEW VGuestBedsAccounting AS
+SELECT 
+GuestBedsAccounting.idReservation,
+Client.SecondName || " " || Client.FirstName As Гость,
+Couchette.Room as "Номер комнаты",
+Couchette.Bed as "Номер кровати",
+GuestBedsAccounting.Cost as Стоимость,
+GuestBedsAccounting.DateArrival AS "Дата заезда",
+GuestBedsAccounting.DateDeparture AS "Дата отъезда"
+ FROM GuestBedsAccounting
+ JOIN Client ON Client.id = GuestBedsAccounting.idClient
+ JOIN Couchette ON Couchette.idСouchette = GuestBedsAccounting.idCouchete

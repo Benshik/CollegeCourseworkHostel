@@ -40,7 +40,7 @@
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.btnReservation = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.reservedPlaces = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
@@ -83,7 +83,7 @@
             this.barButtonItem6,
             this.barButtonItem7,
             this.btnReservation,
-            this.barButtonItem9,
+            this.reservedPlaces,
             this.barSubItem2,
             this.barButtonItem10,
             this.barButtonItem11,
@@ -174,13 +174,14 @@
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBronirovanie_ItemClick);
             // 
-            // barButtonItem9
+            // reservedPlaces
             // 
-            this.barButtonItem9.Caption = "Редактирование";
-            this.barButtonItem9.Id = 12;
-            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
-            this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
-            this.barButtonItem9.Name = "barButtonItem9";
+            this.reservedPlaces.Caption = "Учет спальных мест";
+            this.reservedPlaces.Id = 12;
+            this.reservedPlaces.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("reservedPlaces.ImageOptions.Image")));
+            this.reservedPlaces.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("reservedPlaces.ImageOptions.LargeImage")));
+            this.reservedPlaces.Name = "reservedPlaces";
+            this.reservedPlaces.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReservedPlaces_ItemClick);
             // 
             // barSubItem2
             // 
@@ -236,6 +237,7 @@
             this.barButtonItem16.Caption = "За сегодня";
             this.barButtonItem16.Id = 22;
             this.barButtonItem16.Name = "barButtonItem16";
+            this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
             // 
             // barButtonItem14
             // 
@@ -261,10 +263,10 @@
             // 
             // btnClients
             // 
-            this.btnClients.Caption = "Клиенты";
+            this.btnClients.Caption = "Справочник клиентов";
             this.btnClients.Id = 24;
-            this.btnClients.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.Image")));
-            this.btnClients.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.LargeImage")));
+            this.btnClients.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.ImageOptions.Image")));
+            this.btnClients.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnClients.ImageOptions.LargeImage")));
             this.btnClients.Name = "btnClients";
             this.btnClients.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClients_ItemClick);
             // 
@@ -279,7 +281,7 @@
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btnReservation);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup3.ItemLinks.Add(this.reservedPlaces);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Заказы";
             // 
@@ -346,7 +348,7 @@
             // 
             this.tabbedView1.RootContainer.Element = null;
             // 
-            // fHostel
+            // Hostel
             // 
             this.AllowMdiBar = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,7 +356,7 @@
             this.ClientSize = new System.Drawing.Size(716, 399);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
-            this.Name = "fHostel";
+            this.Name = "Hostel";
             this.Text = "Хостел";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -380,7 +382,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.BarButtonItem btnReservation;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem reservedPlaces;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;

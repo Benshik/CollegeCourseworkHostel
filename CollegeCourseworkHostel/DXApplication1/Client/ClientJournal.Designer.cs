@@ -1,6 +1,6 @@
 ﻿namespace CollegeCourseworkHostel
 {
-    partial class JournalClient
+    partial class ClientJournal
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JournalClient));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientJournal));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnClientAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnClientEdit = new DevExpress.XtraEditors.SimpleButton();
@@ -103,6 +103,7 @@
             this.gridViewClients.GridControl = this.gridControlClients;
             this.gridViewClients.Name = "gridViewClients";
             this.gridViewClients.OptionsBehavior.Editable = false;
+            this.gridViewClients.DoubleClick += new System.EventHandler(this.gridViewClients_DoubleClick);
             // 
             // JournalClient
             // 
