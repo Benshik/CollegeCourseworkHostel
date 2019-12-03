@@ -48,5 +48,9 @@ namespace CollegeCourseworkHostel.Service
         public static string SelectFreeBedByRoom = @"select DISTINCT Bed as '№ кровати' from Couchette where Couchette.Room = {0}
                                                                     AND Couchette.idСouchette not in ( select idСouchette from VBisyBedLoad)";
         public static string SelectBusyBedByRoom= @"select Bed as '№ кровати', DateArrival as 'C:', DateDeparture as 'ПО:' from VBisyBedLoad  where room = {0} ";
+
+        // запрос дял прдсчета дохода
+       // public static string SelectBusyBedByRm = @"select * from VGuestBedsAccounting where {} BETWEEN  \"Дата заезда\"  and  \"Дата отъезда\""; 
+
     }
 }

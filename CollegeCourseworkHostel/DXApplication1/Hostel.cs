@@ -1,12 +1,4 @@
 ﻿using CollegeCourseworkHostel.Сouchette;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 
 namespace CollegeCourseworkHostel
 {
@@ -50,6 +42,13 @@ namespace CollegeCourseworkHostel
             SleepPlace sleepPlace = new SleepPlace();
             sleepPlace.MdiParent = this;
             sleepPlace.Show();
+        }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Evenue evenue = new Evenue();
+            evenue.MdiParent = this;
+            evenue.Show();
         }
     }
 }
