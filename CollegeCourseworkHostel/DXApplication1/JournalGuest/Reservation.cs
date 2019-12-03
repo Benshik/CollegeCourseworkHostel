@@ -180,9 +180,8 @@ namespace CollegeCourseworkHostel
             }
         }
 
-        private void dateEditDeparture_EditValueChanged(object sender, EventArgs e)
+        private void CheckCorrectDateInput()
         {
-            LoadFreeRooms();
             DateTime arrival = Convert.ToDateTime(dateEditArrival.Text);
             DateTime departure = Convert.ToDateTime(dateEditDeparture.Text);
             if (departure > arrival)
@@ -192,24 +191,24 @@ namespace CollegeCourseworkHostel
             else
             {
                 MessageBox.Show("Дата отьезда не может быть меньше даты прибытия!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dateEditDeparture.EditValue = Convert.ToDateTime(dateEditArrival.Text).Date.AddDays(1);
             }
+        }
+
+        private void dateEditDeparture_EditValueChanged(object sender, EventArgs e)
+        {
+            LoadFreeRooms();
+            if (dateEditArrival.Text != string.Empty)
+            {
+                CheckCorrectDateInput();
+            }           
         }
 
         private void dateEditArrival_EditValueChanged(object sender, EventArgs e)
         {
             if (dateEditDeparture.Text != string.Empty)
             {
-                DateTime arrival = Convert.ToDateTime(dateEditArrival.Text);
-                DateTime departure = Convert.ToDateTime(dateEditDeparture.Text);
-                if (departure > arrival)
-                {
-                    tbCost.Text = ((departure.Day - arrival.Day) * 500).ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Дата отьезда не может быть меньше даты прибытия!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
+                CheckCorrectDateInput();
             }
         }
     }

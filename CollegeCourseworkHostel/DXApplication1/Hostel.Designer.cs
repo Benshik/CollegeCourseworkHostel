@@ -176,7 +176,7 @@
             // 
             // reservedPlaces
             // 
-            this.reservedPlaces.Caption = "Учет спальных мест";
+            this.reservedPlaces.Caption = "Гостевой учет";
             this.reservedPlaces.Id = 12;
             this.reservedPlaces.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("reservedPlaces.ImageOptions.Image")));
             this.reservedPlaces.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("reservedPlaces.ImageOptions.LargeImage")));

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gridСouchette = new DevExpress.XtraGrid.GridControl();
             this.gridViewСouchette = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridСouchette)).BeginInit();
@@ -50,6 +49,7 @@
             // 
             this.gridViewСouchette.GridControl = this.gridСouchette;
             this.gridViewСouchette.Name = "gridViewСouchette";
+            this.gridViewСouchette.OptionsBehavior.Editable = false;
             // 
             // СouchetteJournal
             // 

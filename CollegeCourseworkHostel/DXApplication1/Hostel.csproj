@@ -123,10 +123,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BedSpaces\Reservation.cs">
+    <Compile Include="JournalGuest\Reservation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BedSpaces\Reservation.Designer.cs">
+    <Compile Include="JournalGuest\Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
     <Compile Include="Report.cs">
@@ -137,10 +137,10 @@
     </Compile>
     <Compile Include="Service\Query.cs" />
     <Compile Include="Service\SQLAdapter.cs" />
-    <Compile Include="BedSpaces\СouchetteJournal.cs">
+    <Compile Include="JournalGuest\СouchetteJournal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BedSpaces\СouchetteJournal.Designer.cs">
+    <Compile Include="JournalGuest\СouchetteJournal.Designer.cs">
       <DependentUpon>СouchetteJournal.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Client\ClientEdit.resx">
@@ -163,10 +163,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="BedSpaces\Reservation.resx">
+    <EmbeddedResource Include="JournalGuest\Reservation.resx">
       <DependentUpon>Reservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BedSpaces\СouchetteJournal.resx">
+    <EmbeddedResource Include="JournalGuest\СouchetteJournal.resx">
       <DependentUpon>СouchetteJournal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report.resx">
