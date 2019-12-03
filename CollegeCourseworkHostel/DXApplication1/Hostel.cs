@@ -45,11 +45,11 @@ namespace CollegeCourseworkHostel
             clientJournal.Show();
         }
 
-        private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btRooms_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Report report = new Report();
-            report.MdiParent = this;
-            report.Show();
+            SleepPlace sleepPlace = new SleepPlace();
+            sleepPlace.MdiParent = this;
+            sleepPlace.Show();
         }
     }
 }

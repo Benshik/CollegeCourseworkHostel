@@ -30,7 +30,7 @@ namespace CollegeCourseworkHostel.Service
                                                                             where('{0}'  BETWEEN DateArrival  AND DateDeparture) 
                                                                             and('{1}' BETWEEN DateArrival  AND DateDeparture))";
 
-        public static string SelectEmptyBedsForRoom = @"select DISTINCT Bed from Couchette where Couchette.Room = {0}
+        public static string SelectFreeBedByDate = @"select DISTINCT Bed from Couchette where Couchette.Room = {0}
                                                                     AND Couchette.idСouchette not in ( select idСouchette from VBisyBedLoad  
                                                         where ('{1}' BETWEEN DateArrival AND DateDeparture)
                                                                 and('{2}' > DateArrival AND DateDeparture))";
@@ -40,13 +40,13 @@ namespace CollegeCourseworkHostel.Service
         public static string insertNewReserv = @"insert into GuestBedsAccounting(idClient, idCouchete, Cost, DateArrival, DateDeparture) VALUES({0},{1}, {2}, '{3}', '{4}')";
 
 
+        // запросы для отчета спальных мест
+        public static string SelectBisySleepPlaces = @"select distinct room as'№ комнаты' from VBisyBedLoad";
 
+        public static string SelectFreeRoom = @"select DISTINCT room as '№ комнаты'  from Couchette where idСouchette not in (select idСouchette from VBisyBedLoad)";
 
-
- 
-
-
-
-
+        public static string SelectFreeBedByRoom = @"select DISTINCT Bed as '№ кровати' from Couchette where Couchette.Room = {0}
+                                                                    AND Couchette.idСouchette not in ( select idСouchette from VBisyBedLoad)";
+        public static string SelectBusyBedByRoom= @"select Bed as '№ кровати', DateArrival as 'C:', DateDeparture as 'ПО:' from VBisyBedLoad  where room = {0} ";
     }
 }

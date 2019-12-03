@@ -41,7 +41,6 @@
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.btnReservation = new DevExpress.XtraBars.BarButtonItem();
             this.reservedPlaces = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
@@ -52,6 +51,7 @@
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.btnClients = new DevExpress.XtraBars.BarButtonItem();
+            this.btRooms = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -84,7 +84,6 @@
             this.barButtonItem7,
             this.btnReservation,
             this.reservedPlaces,
-            this.barSubItem2,
             this.barButtonItem10,
             this.barButtonItem11,
             this.barButtonItem12,
@@ -94,9 +93,10 @@
             this.barButtonItem15,
             this.barButtonItem16,
             this.skinRibbonGalleryBarItem1,
-            this.btnClients});
+            this.btnClients,
+            this.btRooms});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 25;
+            this.ribbonControl1.MaxItemId = 26;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage2,
@@ -183,19 +183,6 @@
             this.reservedPlaces.Name = "reservedPlaces";
             this.reservedPlaces.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnReservedPlaces_ItemClick);
             // 
-            // barSubItem2
-            // 
-            this.barSubItem2.Caption = "Комнаты";
-            this.barSubItem2.Id = 13;
-            this.barSubItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem2.ImageOptions.Image")));
-            this.barSubItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem2.ImageOptions.LargeImage")));
-            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem10),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem11),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem12),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem13)});
-            this.barSubItem2.Name = "barSubItem2";
-            // 
             // barButtonItem10
             // 
             this.barButtonItem10.Caption = "1 Комната";
@@ -237,7 +224,6 @@
             this.barButtonItem16.Caption = "За сегодня";
             this.barButtonItem16.Id = 22;
             this.barButtonItem16.Name = "barButtonItem16";
-            this.barButtonItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem16_ItemClick);
             // 
             // barButtonItem14
             // 
@@ -270,6 +256,15 @@
             this.btnClients.Name = "btnClients";
             this.btnClients.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnClients_ItemClick);
             // 
+            // btRooms
+            // 
+            this.btRooms.Caption = "Комнаты";
+            this.btRooms.Id = 25;
+            this.btRooms.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btRooms.ImageOptions.Image")));
+            this.btRooms.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btRooms.ImageOptions.LargeImage")));
+            this.btRooms.Name = "btRooms";
+            this.btRooms.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btRooms_ItemClick);
+            // 
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -300,8 +295,8 @@
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.barSubItem2);
             this.ribbonPageGroup4.ItemLinks.Add(this.barSubItem3);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btRooms);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Статистика";
             // 
@@ -355,6 +350,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 399);
             this.Controls.Add(this.ribbonControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "Hostel";
             this.Text = "Хостел";
@@ -387,7 +383,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.BarSubItem barSubItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
@@ -403,6 +398,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+        private DevExpress.XtraBars.BarButtonItem btRooms;
     }
 }
 

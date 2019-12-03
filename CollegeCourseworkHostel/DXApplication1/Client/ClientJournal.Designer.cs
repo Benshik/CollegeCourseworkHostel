@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientJournal));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnClientAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -36,7 +35,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gridControlClients = new DevExpress.XtraGrid.GridControl();
             this.gridViewClients = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -105,14 +104,14 @@
             this.gridViewClients.OptionsBehavior.Editable = false;
             this.gridViewClients.DoubleClick += new System.EventHandler(this.gridViewClients_DoubleClick);
             // 
-            // JournalClient
+            // ClientJournal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.Name = "JournalClient";
+            this.Name = "ClientJournal";
             this.Text = "Список клиентов";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

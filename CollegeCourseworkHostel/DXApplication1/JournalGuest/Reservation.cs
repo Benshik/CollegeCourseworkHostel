@@ -38,7 +38,7 @@ namespace CollegeCourseworkHostel
                 var dateArrival = dateEditArrival.Text;
                 var dateDeparture = dateEditDeparture.Text;
                 var numRoom = comboBoxRoom.SelectedValue;
-                var query = string.Format(Query.SelectEmptyBedsForRoom, numRoom, dateArrival, dateDeparture);
+                var query = string.Format(Query.SelectFreeBedByRoom, numRoom, dateArrival, dateDeparture);
                 DataTable rooms = sqlAdapter.SelectData(query);
                 comboBoxBed.DataSource = rooms;
                 comboBoxBed.ValueMember = "Bed";
